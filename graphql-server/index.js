@@ -16,6 +16,25 @@ const typeDefs = gql`
     projectManager: Boolean
   }
 
+  const users = [
+  {
+    id: 1,
+    username: 'Diana',
+    password: 'IamWonderwomen',
+    firstName: 'Diana',
+    lastName: 'V',
+    projectManager: true,
+  },
+  {
+    id: 1,
+    username: 'Ghenadie',
+    password: 'IamBatman',
+    firstName: 'Ghenadie',
+    lastName: 'P',
+    projectManager: false,
+  },
+];
+
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
