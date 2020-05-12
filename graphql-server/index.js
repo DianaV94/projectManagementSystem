@@ -27,17 +27,15 @@ const typeDefs = gql`
     id: Int
     employee_code: String
     employee_name: String
-    user_account_id: Int
-    role_id: Int
-    #account: UserAccount
-    #role: Role
+    account: UserAccount
+    role: Role
   }
 
   type UserAccount {
     id: Int
     email: String
-    firstName: String
-    lastName: String
+    firstname: String
+    lastname: String
   }
 
   type Role {
@@ -48,6 +46,7 @@ const typeDefs = gql`
   # Queries
   type Query {
     employees: [Employee]
+    employee(name: String): [Employee]
     # projects: [Project]
     # project(id: Int): [Project]
   }
@@ -70,7 +69,11 @@ const resolvers = {
     Query: {
         employees: async (parent, args, context, info) => {
            return await getEmployees()
-        }
+        },
+
+        employee: async (parent, args, context, info) => {
+          return await getEmployee(args.name)
+       },
         // projects: async (parent, args, context, info) => {
         //     return await query(`SELECT * FROM project`)
         // },
@@ -80,16 +83,32 @@ const resolvers = {
     },
 };
 
-async function getEmployees() {
-  var employees = await getRawEmployees()
-  var userAccounts = await getRawUserAccounts()
-  var roles = await getRawRoles()
+async function getEmployee(name) {
+  var employees = await getEmployees()
+  return employees.filter(employee => employee.employee_name == name)
+}
 
+async function getEmployees(filter) {
+  var rawEmployees = await getRawEmployees()
+  var rawUserAccounts = await getRawUserAccounts()
+  var rawRoles = await getRawRoles()
 
-  console.log(userAccounts)
-  console.log(roles)
+  return rawEmployees.map(makeEmployeeMapper(rawUserAccounts, rawRoles))
+}
 
-  return employees
+function makeEmployeeMapper(rawUserAccounts, rawRoles) {
+  return function mapEmployee(employee) {
+    var rawAccount = rawUserAccounts.find(account => account.id == employee.user_account_id)
+    var rawRole = rawRoles.find(role => role.id == employee.role_id)
+
+    return {
+      id: employee.id,
+      employee_code: employee.employee_code,
+      employee_name: employee.employee_name,
+      account: rawAccount,
+      role: rawRole
+    }
+  }
 }
 
 /*
