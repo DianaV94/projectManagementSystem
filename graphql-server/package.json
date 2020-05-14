@@ -12,7 +12,10 @@
   "dependencies": {
     "apollo-server": "^2.13.0",
     "graphql": "^15.0.0",
+    "graphql-date": "^1.0.3",
     "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
     "util": "^0.12.3"
   }
 }
