@@ -1,0 +1,55 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "employee_code": "104",
+      "employee_name": "Anca",
+      "account_id": 2,
+      "role_id": 1,
+      "lastname": "Test"
+    },
+    {
+      "id": 3
+    },
+    {
+      "employee_code": "103",
+      "id": 4
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "role_name": "manager"
+    },
+    {
+      "role_name": "tester",
+      "id": 3
+    },
+    {
+      "role_name": "developer",
+      "id": 4
+    },
+    {
+      "role_name": "project_manager",
+      "id": 5
+    },
+    {
+      "role_name": "developer",
+      "id": 6
+    }
+  ],
+  "user_account": [
+    {
+      "id": 1,
+      "email": "dianatest@gmail.com",
+      "firstname": "Diana",
+      "lastname": "Pop"
+    },
+    {
+      "email": "ghenadietest@gmail.com",
+      "firstname": "Ghenadie",
+      "lastname": "Test",
+      "id": 2
+    }
+  ]
+}

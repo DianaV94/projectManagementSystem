@@ -1,0 +1,272 @@
+# Write your query or mutation here
+# mutation {
+#   addClient(name: "name2", 
+#     address: "add1",
+#     details: "dt1", 
+#     email: "email1") {
+#     id
+#     name
+#     address
+#     details
+#     email
+#   }
+# }
+
+# mutation {
+#   deleteClient(id:7){
+#     id
+#   }
+# }
+
+# mutation
+# {
+#   addClient(input: {
+#     name: "name23", 
+#     address: "add1",
+#     details: "dt1",
+#     email: "email1"
+#   }) {
+#     id
+#     name
+#   }
+# }
+
+# mutation {
+#   updateClient(id: 6, 
+#     input: {
+#       name: "Diana"
+#       details: "Detaillls2"
+#   }) {
+#     id
+#     details
+#   }
+# }
+
+# mutation {
+#   createEmployee(input: {
+#     employee_name: "Ghenadie",
+#     employee_code: "102",
+#     account_id: 1,
+#     role_id: 1
+#   }) {
+#     id
+#     employee_name
+#     employee_code
+#     account {
+#       id
+#       email
+#       firstname
+#       lastname
+#     }
+#     role {
+#       role_name
+#       id
+#     }
+#   }
+# }
+
+# mutation {
+#   updateEmployee(id: 2, 
+#     input: {
+#     employee_code: "104",
+#   }) {
+#     id
+#     employee_name
+#     employee_code
+#     account {
+#       id
+#       email
+#       firstname
+#       lastname
+#     }
+#     role {
+#       role_name
+#       id
+#     }
+#   }
+# }
+
+# query{
+#   employees{
+#     employee_code
+#     id
+#     employee_name
+#   }
+  
+# }
+
+# query{
+#   employee(name: "Anca"){
+#     employee_code
+#     employee_name
+#     id
+#     account{
+#       id
+#       email
+#     }
+#     role {
+#       id
+#       role_name
+#     }
+#   }
+# }
+
+# mutation{
+#   deleteUserAccount(id:2)
+# }
+
+# mutation {
+#   createUserAccount(input: {
+   
+#   email: "ghenadietest@gmail.com",
+#     firstname: "Ghenadie",
+#     lastname: "Pusca"})
+  
+#   {
+#     id
+#     email,
+#     firstname,
+#     lastname
+#   }
+#   }
+#   mutation{
+#     updateUserAccount(id:2, input:{
+#       lastname: "Test"
+#     })
+#     {
+      
+#       lastname
+#     }
+#   }
+
+# mutation{
+#   createRole(input:{
+#     role_name: "product_owner"
+#   })
+#   {
+#     id
+#     role_name
+#   }
+# }
+
+# mutation{
+#   deleteRole(id:2)
+# }
+
+# mutation{
+#   updateRole(id:6, input:
+#   {
+#     role_name:"developer"
+#   })
+#   {
+#     role_name
+#   }
+# }
+
+# mutation
+# {
+#   createProject(input: {
+#     project_name: "project101", 
+#     start_date: "2023-07-02",
+#     end_date: "2024-08-01",
+#     project_descr: "descr100",
+#     employee_id: 3,
+#     budget: 1002,
+#     client_id:8
+    
+#   }) {
+#     project_name
+#     start_date
+#   }
+# }
+
+# mutation {
+#   deleteProject(id:11){
+#     id
+#     project_name
+#   }
+# }
+
+# mutation {
+#   updateProject(id: 1, 
+#     input: {
+#       project_name: "Project1"
+      
+#   }) {
+#     id
+#     project_name
+#   }
+# }
+
+# mutation{
+#   createTask(input:{
+#     task_name:"task1",
+#     priority:1,
+#     description:"descr1",
+#     start_date:"2020-02-03",
+#     end_date:"2020-04-05",
+#     next_task:2,
+#     employee_id:1,
+#     project_id:1
+    
+#   })
+#   {
+#     task_name
+#   }
+# }
+
+# mutation {
+#   deleteTask(id:1){
+#     id
+#   }
+# }
+
+# mutation {
+#   updateTask(id: 2, 
+#     input: {
+#       task_name: "task11"
+      
+#   }) {
+#     id
+#     task_name
+#   }
+# }
+
+
+# mutation{
+#   createActivity(input:{
+#     activity_name:"activity2",
+#     task_id:2,
+#     priority:1,
+#     description:"descr1",
+#     start_date:"2020-02-03",
+#     end_date:"2020-04-05",
+#     next_activity:2,
+#     employee_id:1
+    
+#   })
+#   {
+#     activity_name
+#   }
+# }
+
+
+# mutation {
+#   deleteActivity(id:1){
+#     id
+#   }
+# }
+
+#  mutation {
+#   updateActivity(id: 3, 
+#     input: {
+#       activity_name: "activity3"
+      
+#   }) {
+#     id
+#     activity_name
+#   }
+# }
+
+
+
