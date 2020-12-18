@@ -254,13 +254,16 @@ const Paths = {"Employees":"employees", "UserAccount":"user_account", "Roles":"r
 Object.freeze(Paths)
 
 function Request(path) {
-  return host + "/" + path
+  return {
+    uri: host + "/" + path,
+    json: true
+  }
 }
 
 function PostRequest(path) {
   return (body) => {
     return {
-      uri: Request(path),
+      uri: Request(path).uri,
       method: "POST",
       body: body,
       json: true
@@ -271,7 +274,7 @@ function PostRequest(path) {
 function PutRequest(path) {
   return (id, body) => {
     return {
-      uri: Request(path)+ "/" + id,
+      uri: Request(path).uri+ "/" + id,
       method: "PATCH",
       body: body,
       json: true
@@ -282,7 +285,7 @@ function PutRequest(path) {
 function RequestByQuery(path, queryName) {
   return (query) => {
     return {
-      uri: Request(path) + "?" + queryName + "=" + query,
+      uri: Request(path).uri + "?" + queryName + "=" + query,
       json: true
     }
   }
@@ -291,7 +294,7 @@ function RequestByQuery(path, queryName) {
 function RequestById(path, method) {
   return (id) => {
     return {
-      uri: Request(path) + "/" + id,
+      uri: Request(path).uri + "/" + id,
       method: method,
       json: true
     }
@@ -335,10 +338,16 @@ const query = util.promisify(client.query).bind(client);
 const resolvers = {
     Query: {
         employees: async () => {
-           return await request(employee_request)
+          console.log(employee_request)
+           var result = await request(employee_request)
+           console.log(result)
+           console.log(result[0])
+           return result
         },
         employee: async (parent, args) => {
           var result = await request(employee_by_name_request(args.name))
+          console.log(result)
+          console.log(result[0])
           return result[0]
         },
        
@@ -462,7 +471,6 @@ const resolvers = {
       updateRole: async (parent, {id, input}, context, info) => {
         return await request(roles_update_request(id, input))
       }
-
     },
     
     Employee: {

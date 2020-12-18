@@ -15,6 +15,8 @@
 		8473B3C3258D1C7300E6CD0D /* ProjectManagementMacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3C2258D1C7300E6CD0D /* ProjectManagementMacOSUITests.swift */; };
 		8473B3D5258D1D0600E6CD0D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8473B3D4258D1D0600E6CD0D /* Apollo */; };
 		8473B3DA258D1DAB00E6CD0D /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 8473B3D9258D1DAB00E6CD0D /* schema.json */; };
+		8473B3E3258D25AB00E6CD0D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3E2258D25AB00E6CD0D /* API.swift */; };
+		8473B3E8258D25B700E6CD0D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3E7258D25B700E6CD0D /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8473B3C2258D1C7300E6CD0D /* ProjectManagementMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagementMacOSUITests.swift; sourceTree = "<group>"; };
 		8473B3C4258D1C7300E6CD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8473B3D9258D1DAB00E6CD0D /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		8473B3E2258D25AB00E6CD0D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8473B3E7258D25B700E6CD0D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +105,14 @@
 			isa = PBXGroup;
 			children = (
 				8473B3D9258D1DAB00E6CD0D /* schema.json */,
+				8473B3E2258D25AB00E6CD0D /* API.swift */,
 				8473B3A4258D1C7200E6CD0D /* ProjectManagementMacOSApp.swift */,
 				8473B3A6258D1C7200E6CD0D /* ContentView.swift */,
 				8473B3A8258D1C7300E6CD0D /* Assets.xcassets */,
 				8473B3AD258D1C7300E6CD0D /* Info.plist */,
 				8473B3AE258D1C7300E6CD0D /* ProjectManagementMacOS.entitlements */,
 				8473B3AA258D1C7300E6CD0D /* Preview Content */,
+				8473B3E7258D25B700E6CD0D /* Network.swift */,
 			);
 			path = ProjectManagementMacOS;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8473B3A7258D1C7200E6CD0D /* ContentView.swift in Sources */,
+				8473B3E3258D25AB00E6CD0D /* API.swift in Sources */,
+				8473B3E8258D25B700E6CD0D /* Network.swift in Sources */,
 				8473B3A5258D1C7200E6CD0D /* ProjectManagementMacOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
