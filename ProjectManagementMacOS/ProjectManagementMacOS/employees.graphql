@@ -1,0 +1,17 @@
+query {
+  employees {
+    id
+    employee_code
+    employee_name
+    account {
+      id
+      email
+      firstname
+      lastname
+    }
+    role {
+      id
+      role_name
+    }
+  }
+}
