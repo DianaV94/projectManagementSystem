@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84018772258BE4D900D9F7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84018771258BE4D900D9F7CF /* AppDelegate.swift */; };
+		84018774258BE4D900D9F7CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84018773258BE4D900D9F7CF /* ContentView.swift */; };
+		84018776258BE4DA00D9F7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84018775258BE4DA00D9F7CF /* Assets.xcassets */; };
+		84018779258BE4DA00D9F7CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84018778258BE4DA00D9F7CF /* Preview Assets.xcassets */; };
+		8401877C258BE4DA00D9F7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8401877A258BE4DA00D9F7CF /* Main.storyboard */; };
+		84018788258BE4DA00D9F7CF /* ProjectManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84018787258BE4DA00D9F7CF /* ProjectManagementTests.swift */; };
+		84018793258BE4DA00D9F7CF /* ProjectManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84018792258BE4DA00D9F7CF /* ProjectManagementUITests.swift */; };
+		8473B38F258D1B1900E6CD0D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8473B38E258D1B1900E6CD0D /* Apollo */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84018784258BE4DA00D9F7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84018766258BE4D900D9F7CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8401876D258BE4D900D9F7CF;
+			remoteInfo = ProjectManagement;
+		};
+		8401878F258BE4DA00D9F7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84018766258BE4D900D9F7CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8401876D258BE4D900D9F7CF;
+			remoteInfo = ProjectManagement;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8401876E258BE4D900D9F7CF /* ProjectManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84018771258BE4D900D9F7CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84018773258BE4D900D9F7CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84018775258BE4DA00D9F7CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84018778258BE4DA00D9F7CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8401877B258BE4DA00D9F7CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8401877D258BE4DA00D9F7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8401877E258BE4DA00D9F7CF /* ProjectManagement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectManagement.entitlements; sourceTree = "<group>"; };
+		84018783258BE4DA00D9F7CF /* ProjectManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84018787258BE4DA00D9F7CF /* ProjectManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagementTests.swift; sourceTree = "<group>"; };
+		84018789258BE4DA00D9F7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8401878E258BE4DA00D9F7CF /* ProjectManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84018792258BE4DA00D9F7CF /* ProjectManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagementUITests.swift; sourceTree = "<group>"; };
+		84018794258BE4DA00D9F7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CEC537258BF749007E1DC8 /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8401876B258BE4D900D9F7CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8473B38F258D1B1900E6CD0D /* Apollo in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84018780258BE4DA00D9F7CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8401878B258BE4DA00D9F7CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84018765258BE4D900D9F7CF = {
+			isa = PBXGroup;
+			children = (
+				84018770258BE4D900D9F7CF /* ProjectManagement */,
+				84018786258BE4DA00D9F7CF /* ProjectManagementTests */,
+				84018791258BE4DA00D9F7CF /* ProjectManagementUITests */,
+				8401876F258BE4D900D9F7CF /* Products */,
+				84CEC536258BF749007E1DC8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8401876F258BE4D900D9F7CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8401876E258BE4D900D9F7CF /* ProjectManagement.app */,
+				84018783258BE4DA00D9F7CF /* ProjectManagementTests.xctest */,
+				8401878E258BE4DA00D9F7CF /* ProjectManagementUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84018770258BE4D900D9F7CF /* ProjectManagement */ = {
+			isa = PBXGroup;
+			children = (
+				84018771258BE4D900D9F7CF /* AppDelegate.swift */,
+				84018773258BE4D900D9F7CF /* ContentView.swift */,
+				84018775258BE4DA00D9F7CF /* Assets.xcassets */,
+				8401877A258BE4DA00D9F7CF /* Main.storyboard */,
+				8401877D258BE4DA00D9F7CF /* Info.plist */,
+				8401877E258BE4DA00D9F7CF /* ProjectManagement.entitlements */,
+				84018777258BE4DA00D9F7CF /* Preview Content */,
+			);
+			path = ProjectManagement;
+			sourceTree = "<group>";
+		};
+		84018777258BE4DA00D9F7CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				84018778258BE4DA00D9F7CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84018786258BE4DA00D9F7CF /* ProjectManagementTests */ = {
+			isa = PBXGroup;
+			children = (
+				84018787258BE4DA00D9F7CF /* ProjectManagementTests.swift */,
+				84018789258BE4DA00D9F7CF /* Info.plist */,
+			);
+			path = ProjectManagementTests;
+			sourceTree = "<group>";
+		};
+		84018791258BE4DA00D9F7CF /* ProjectManagementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84018792258BE4DA00D9F7CF /* ProjectManagementUITests.swift */,
+				84018794258BE4DA00D9F7CF /* Info.plist */,
+			);
+			path = ProjectManagementUITests;
+			sourceTree = "<group>";
+		};
+		84CEC536258BF749007E1DC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84CEC537258BF749007E1DC8 /* Apollo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8401876D258BE4D900D9F7CF /* ProjectManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84018797258BE4DA00D9F7CF /* Build configuration list for PBXNativeTarget "ProjectManagement" */;
+			buildPhases = (
+				8401876A258BE4D900D9F7CF /* Sources */,
+				8401876B258BE4D900D9F7CF /* Frameworks */,
+				8401876C258BE4D900D9F7CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectManagement;
+			packageProductDependencies = (
+				8473B38E258D1B1900E6CD0D /* Apollo */,
+			);
+			productName = ProjectManagement;
+			productReference = 8401876E258BE4D900D9F7CF /* ProjectManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84018782258BE4DA00D9F7CF /* ProjectManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8401879A258BE4DA00D9F7CF /* Build configuration list for PBXNativeTarget "ProjectManagementTests" */;
+			buildPhases = (
+				8401877F258BE4DA00D9F7CF /* Sources */,
+				84018780258BE4DA00D9F7CF /* Frameworks */,
+				84018781258BE4DA00D9F7CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84018785258BE4DA00D9F7CF /* PBXTargetDependency */,
+			);
+			name = ProjectManagementTests;
+			productName = ProjectManagementTests;
+			productReference = 84018783258BE4DA00D9F7CF /* ProjectManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8401878D258BE4DA00D9F7CF /* ProjectManagementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8401879D258BE4DA00D9F7CF /* Build configuration list for PBXNativeTarget "ProjectManagementUITests" */;
+			buildPhases = (
+				8401878A258BE4DA00D9F7CF /* Sources */,
+				8401878B258BE4DA00D9F7CF /* Frameworks */,
+				8401878C258BE4DA00D9F7CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84018790258BE4DA00D9F7CF /* PBXTargetDependency */,
+			);
+			name = ProjectManagementUITests;
+			productName = ProjectManagementUITests;
+			productReference = 8401878E258BE4DA00D9F7CF /* ProjectManagementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84018766258BE4D900D9F7CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1230;
+				ORGANIZATIONNAME = Diana;
+				TargetAttributes = {
+					8401876D258BE4D900D9F7CF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					84018782258BE4DA00D9F7CF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8401876D258BE4D900D9F7CF;
+					};
+					8401878D258BE4DA00D9F7CF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8401876D258BE4D900D9F7CF;
+					};
+				};
+			};
+			buildConfigurationList = 84018769258BE4D900D9F7CF /* Build configuration list for PBXProject "ProjectManagement" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84018765258BE4D900D9F7CF;
+			packageReferences = (
+				8473B38D258D1B1900E6CD0D /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
+			productRefGroup = 8401876F258BE4D900D9F7CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8401876D258BE4D900D9F7CF /* ProjectManagement */,
+				84018782258BE4DA00D9F7CF /* ProjectManagementTests */,
+				8401878D258BE4DA00D9F7CF /* ProjectManagementUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8401876C258BE4D900D9F7CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8401877C258BE4DA00D9F7CF /* Main.storyboard in Resources */,
+				84018779258BE4DA00D9F7CF /* Preview Assets.xcassets in Resources */,
+				84018776258BE4DA00D9F7CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84018781258BE4DA00D9F7CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8401878C258BE4DA00D9F7CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8401876A258BE4D900D9F7CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84018774258BE4D900D9F7CF /* ContentView.swift in Sources */,
+				84018772258BE4D900D9F7CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8401877F258BE4DA00D9F7CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84018788258BE4DA00D9F7CF /* ProjectManagementTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8401878A258BE4DA00D9F7CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84018793258BE4DA00D9F7CF /* ProjectManagementUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84018785258BE4DA00D9F7CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8401876D258BE4D900D9F7CF /* ProjectManagement */;
+			targetProxy = 84018784258BE4DA00D9F7CF /* PBXContainerItemProxy */;
+		};
+		84018790258BE4DA00D9F7CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8401876D258BE4D900D9F7CF /* ProjectManagement */;
+			targetProxy = 8401878F258BE4DA00D9F7CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8401877A258BE4DA00D9F7CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8401877B258BE4DA00D9F7CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84018795258BE4DA00D9F7CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84018796258BE4DA00D9F7CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		84018798258BE4DA00D9F7CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectManagement/ProjectManagement.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"ProjectManagement/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ProjectManagement/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = master.ProjectManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84018799258BE4DA00D9F7CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectManagement/ProjectManagement.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"ProjectManagement/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ProjectManagement/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = master.ProjectManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8401879B258BE4DA00D9F7CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ProjectManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = master.ProjectManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectManagement.app/Contents/MacOS/ProjectManagement";
+			};
+			name = Debug;
+		};
+		8401879C258BE4DA00D9F7CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ProjectManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = master.ProjectManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectManagement.app/Contents/MacOS/ProjectManagement";
+			};
+			name = Release;
+		};
+		8401879E258BE4DA00D9F7CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ProjectManagementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = master.ProjectManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ProjectManagement;
+			};
+			name = Debug;
+		};
+		8401879F258BE4DA00D9F7CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ProjectManagementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = master.ProjectManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ProjectManagement;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84018769258BE4D900D9F7CF /* Build configuration list for PBXProject "ProjectManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84018795258BE4DA00D9F7CF /* Debug */,
+				84018796258BE4DA00D9F7CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84018797258BE4DA00D9F7CF /* Build configuration list for PBXNativeTarget "ProjectManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84018798258BE4DA00D9F7CF /* Debug */,
+				84018799258BE4DA00D9F7CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8401879A258BE4DA00D9F7CF /* Build configuration list for PBXNativeTarget "ProjectManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8401879B258BE4DA00D9F7CF /* Debug */,
+				8401879C258BE4DA00D9F7CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8401879D258BE4DA00D9F7CF /* Build configuration list for PBXNativeTarget "ProjectManagementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8401879E258BE4DA00D9F7CF /* Debug */,
+				8401879F258BE4DA00D9F7CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8473B38D258D1B1900E6CD0D /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.38.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8473B38E258D1B1900E6CD0D /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8473B38D258D1B1900E6CD0D /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 84018766258BE4D900D9F7CF /* Project object */;
+}
