@@ -147,6 +147,7 @@
 				8473B39D258D1C7200E6CD0D /* Sources */,
 				8473B39E258D1C7200E6CD0D /* Frameworks */,
 				8473B39F258D1C7200E6CD0D /* Resources */,
+				8473B3DE258D23F100E6CD0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +268,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8473B3DE258D23F100E6CD0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}\"/Codegen\nxcrun -sdk macosx swift run\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8473B39D258D1C7200E6CD0D /* Sources */ = {

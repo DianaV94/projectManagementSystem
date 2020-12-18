@@ -30,6 +30,17 @@ do {
   exit(1)
 }
 
+let targetURL = sourceRootURL
+    .apollo.childFolderURL(folderName: "ProjectManagementMacOS")
+let codegenOptions = ApolloCodegenOptions(targetRootURL: targetURL)
+
+do {
+    try ApolloCodegen.run(from: targetURL,
+                          with: cliFolderURL,
+                          options: codegenOptions)
+} catch {
+    exit(1)
+}
 
 
 
