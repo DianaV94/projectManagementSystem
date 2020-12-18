@@ -1,20 +1,18 @@
 //
 //  ContentView.swift
-//  ProjectManagement
+//  ProjectManagementMacOS
 //
-//  Created by Diana on 17/12/2020.
-//  Copyright © 2020 Diana. All rights reserved.
+//  Created by Diana on 18.12.2020.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        Text("Hello, world!")
+            .padding()
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
