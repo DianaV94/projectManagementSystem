@@ -14,9 +14,23 @@
 		8473B3B8258D1C7300E6CD0D /* ProjectManagementMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3B7258D1C7300E6CD0D /* ProjectManagementMacOSTests.swift */; };
 		8473B3C3258D1C7300E6CD0D /* ProjectManagementMacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3C2258D1C7300E6CD0D /* ProjectManagementMacOSUITests.swift */; };
 		8473B3D5258D1D0600E6CD0D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8473B3D4258D1D0600E6CD0D /* Apollo */; };
-		8473B3DA258D1DAB00E6CD0D /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 8473B3D9258D1DAB00E6CD0D /* schema.json */; };
-		8473B3E3258D25AB00E6CD0D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3E2258D25AB00E6CD0D /* API.swift */; };
 		8473B3E8258D25B700E6CD0D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3E7258D25B700E6CD0D /* Network.swift */; };
+		8473B3F0258D320800E6CD0D /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3EF258D320800E6CD0D /* Sidebar.swift */; };
+		8473B3F5258D362F00E6CD0D /* EmployeesTableEntriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3F4258D362F00E6CD0D /* EmployeesTableEntriesList.swift */; };
+		8473B3FA258D42A900E6CD0D /* EmployeesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3F9258D42A900E6CD0D /* EmployeesDataStore.swift */; };
+		8473B402258D4CD200E6CD0D /* EmployeeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B401258D4CD200E6CD0D /* EmployeeDetails.swift */; };
+		8473B417258E6C5A00E6CD0D /* operationIDs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8473B413258E6C5A00E6CD0D /* operationIDs.json */; };
+		8473B418258E6C5A00E6CD0D /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 8473B414258E6C5A00E6CD0D /* schema.json */; };
+		8473B419258E6C5A00E6CD0D /* employees.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8473B415258E6C5A00E6CD0D /* employees.graphql */; };
+		8473B41A258E6C5A00E6CD0D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B416258E6C5A00E6CD0D /* API.swift */; };
+		8473B42B25911E7D00E6CD0D /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B42A25911E7D00E6CD0D /* DataState.swift */; };
+		8473B43D2591251300E6CD0D /* employee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8473B43C2591251300E6CD0D /* employee.graphql */; };
+		8473B449259126CE00E6CD0D /* EmployeeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B448259126CE00E6CD0D /* EmployeeDataStore.swift */; };
+		8473B45A25912FE500E6CD0D /* deleteEmployee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8473B45925912FE500E6CD0D /* deleteEmployee.graphql */; };
+		8473B46325913CFF00E6CD0D /* ClientsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B46225913CFF00E6CD0D /* ClientsDataStore.swift */; };
+		8473B46B25913E5500E6CD0D /* ClientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B46A25913E5500E6CD0D /* ClientsList.swift */; };
+		8473B479259140E600E6CD0D /* AddClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B478259140E600E6CD0D /* AddClient.swift */; };
+		8473B484259147FD00E6CD0D /* ClientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B483259147FD00E6CD0D /* ClientDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +64,23 @@
 		8473B3BE258D1C7300E6CD0D /* ProjectManagementMacOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagementMacOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8473B3C2258D1C7300E6CD0D /* ProjectManagementMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagementMacOSUITests.swift; sourceTree = "<group>"; };
 		8473B3C4258D1C7300E6CD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8473B3D9258D1DAB00E6CD0D /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		8473B3E2258D25AB00E6CD0D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8473B3E7258D25B700E6CD0D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8473B3EF258D320800E6CD0D /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		8473B3F4258D362F00E6CD0D /* EmployeesTableEntriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableEntriesList.swift; sourceTree = "<group>"; };
+		8473B3F9258D42A900E6CD0D /* EmployeesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesDataStore.swift; sourceTree = "<group>"; };
+		8473B401258D4CD200E6CD0D /* EmployeeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetails.swift; sourceTree = "<group>"; };
+		8473B413258E6C5A00E6CD0D /* operationIDs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = operationIDs.json; sourceTree = "<group>"; };
+		8473B414258E6C5A00E6CD0D /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		8473B415258E6C5A00E6CD0D /* employees.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = employees.graphql; sourceTree = "<group>"; };
+		8473B416258E6C5A00E6CD0D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8473B42A25911E7D00E6CD0D /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
+		8473B43C2591251300E6CD0D /* employee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = employee.graphql; sourceTree = "<group>"; };
+		8473B448259126CE00E6CD0D /* EmployeeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataStore.swift; sourceTree = "<group>"; };
+		8473B45925912FE500E6CD0D /* deleteEmployee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deleteEmployee.graphql; sourceTree = "<group>"; };
+		8473B46225913CFF00E6CD0D /* ClientsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsDataStore.swift; sourceTree = "<group>"; };
+		8473B46A25913E5500E6CD0D /* ClientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsList.swift; sourceTree = "<group>"; };
+		8473B478259140E600E6CD0D /* AddClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClient.swift; sourceTree = "<group>"; };
+		8473B483259147FD00E6CD0D /* ClientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,15 +132,18 @@
 		8473B3A3258D1C7200E6CD0D /* ProjectManagementMacOS */ = {
 			isa = PBXGroup;
 			children = (
-				8473B3D9258D1DAB00E6CD0D /* schema.json */,
-				8473B3E2258D25AB00E6CD0D /* API.swift */,
+				8473B46125913CF600E6CD0D /* Clients */,
+				8473B4442591268600E6CD0D /* EmployeeDetails */,
+				8473B43225911FF300E6CD0D /* Views */,
+				8473B41E258E74C900E6CD0D /* Employees */,
+				8473B412258E6C5A00E6CD0D /* graphQL */,
 				8473B3A4258D1C7200E6CD0D /* ProjectManagementMacOSApp.swift */,
-				8473B3A6258D1C7200E6CD0D /* ContentView.swift */,
 				8473B3A8258D1C7300E6CD0D /* Assets.xcassets */,
 				8473B3AD258D1C7300E6CD0D /* Info.plist */,
 				8473B3AE258D1C7300E6CD0D /* ProjectManagementMacOS.entitlements */,
 				8473B3AA258D1C7300E6CD0D /* Preview Content */,
 				8473B3E7258D25B700E6CD0D /* Network.swift */,
+				8473B42A25911E7D00E6CD0D /* DataState.swift */,
 			);
 			path = ProjectManagementMacOS;
 			sourceTree = "<group>";
@@ -141,6 +172,57 @@
 				8473B3C4258D1C7300E6CD0D /* Info.plist */,
 			);
 			path = ProjectManagementMacOSUITests;
+			sourceTree = "<group>";
+		};
+		8473B412258E6C5A00E6CD0D /* graphQL */ = {
+			isa = PBXGroup;
+			children = (
+				8473B45925912FE500E6CD0D /* deleteEmployee.graphql */,
+				8473B413258E6C5A00E6CD0D /* operationIDs.json */,
+				8473B414258E6C5A00E6CD0D /* schema.json */,
+				8473B415258E6C5A00E6CD0D /* employees.graphql */,
+				8473B43C2591251300E6CD0D /* employee.graphql */,
+				8473B416258E6C5A00E6CD0D /* API.swift */,
+			);
+			path = graphQL;
+			sourceTree = "<group>";
+		};
+		8473B41E258E74C900E6CD0D /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				8473B3F9258D42A900E6CD0D /* EmployeesDataStore.swift */,
+				8473B3F4258D362F00E6CD0D /* EmployeesTableEntriesList.swift */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		8473B43225911FF300E6CD0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8473B3A6258D1C7200E6CD0D /* ContentView.swift */,
+				8473B3EF258D320800E6CD0D /* Sidebar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8473B4442591268600E6CD0D /* EmployeeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8473B448259126CE00E6CD0D /* EmployeeDataStore.swift */,
+				8473B401258D4CD200E6CD0D /* EmployeeDetails.swift */,
+			);
+			path = EmployeeDetails;
+			sourceTree = "<group>";
+		};
+		8473B46125913CF600E6CD0D /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				8473B46225913CFF00E6CD0D /* ClientsDataStore.swift */,
+				8473B46A25913E5500E6CD0D /* ClientsList.swift */,
+				8473B478259140E600E6CD0D /* AddClient.swift */,
+				8473B483259147FD00E6CD0D /* ClientDetails.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,8 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8473B419258E6C5A00E6CD0D /* employees.graphql in Resources */,
+				8473B43D2591251300E6CD0D /* employee.graphql in Resources */,
+				8473B418258E6C5A00E6CD0D /* schema.json in Resources */,
+				8473B45A25912FE500E6CD0D /* deleteEmployee.graphql in Resources */,
+				8473B417258E6C5A00E6CD0D /* operationIDs.json in Resources */,
 				8473B3AC258D1C7300E6CD0D /* Preview Assets.xcassets in Resources */,
-				8473B3DA258D1DAB00E6CD0D /* schema.json in Resources */,
 				8473B3A9258D1C7300E6CD0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,9 +386,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8473B402258D4CD200E6CD0D /* EmployeeDetails.swift in Sources */,
+				8473B46B25913E5500E6CD0D /* ClientsList.swift in Sources */,
+				8473B3FA258D42A900E6CD0D /* EmployeesDataStore.swift in Sources */,
+				8473B3F0258D320800E6CD0D /* Sidebar.swift in Sources */,
 				8473B3A7258D1C7200E6CD0D /* ContentView.swift in Sources */,
-				8473B3E3258D25AB00E6CD0D /* API.swift in Sources */,
+				8473B3F5258D362F00E6CD0D /* EmployeesTableEntriesList.swift in Sources */,
+				8473B42B25911E7D00E6CD0D /* DataState.swift in Sources */,
 				8473B3E8258D25B700E6CD0D /* Network.swift in Sources */,
+				8473B41A258E6C5A00E6CD0D /* API.swift in Sources */,
+				8473B484259147FD00E6CD0D /* ClientDetails.swift in Sources */,
+				8473B449259126CE00E6CD0D /* EmployeeDataStore.swift in Sources */,
+				8473B479259140E600E6CD0D /* AddClient.swift in Sources */,
+				8473B46325913CFF00E6CD0D /* ClientsDataStore.swift in Sources */,
 				8473B3A5258D1C7200E6CD0D /* ProjectManagementMacOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

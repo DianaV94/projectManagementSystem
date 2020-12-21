@@ -1,0 +1,34 @@
+{
+  "dfc5b789ea03265d608a7508d7bc75006b61d35d012788f175678bb466b08650": {
+    "name": "Client",
+    "source": "query Client($id: Int!) {\n  client(id: $id) {\n    __typename\n    name\n    address\n    email\n    details\n  }\n}"
+  },
+  "246a6b69b519cd0147c30cd4738abafba6e01b87dd39f5cc309bad359195546f": {
+    "name": "Clients",
+    "source": "query Clients {\n  clients {\n    __typename\n    id\n    name\n  }\n}"
+  },
+  "bf5ca550808244ee1f3b081802c481bb3368d1eb49934642c367ed62c8919da7": {
+    "name": "CreateClient",
+    "source": "mutation CreateClient($input: ClientInput) {\n  createClient(input: $input) {\n    __typename\n    id\n    name\n  }\n}"
+  },
+  "6dd2900572e91000c57541b967fe697e0b7d92b9abf0819e8463096ace0954a1": {
+    "name": "DeleteClient",
+    "source": "mutation DeleteClient($id: Int!) {\n  deleteClient(id: $id)\n}"
+  },
+  "e650f8b09a676f50f054805da9320a7e470f79b15a3658774abec69fe2fdcaa9": {
+    "name": "DeleteEmployee",
+    "source": "mutation DeleteEmployee($id: Int!) {\n  deleteEmployee(id: $id)\n}"
+  },
+  "1d4724921e3778cb05f44e68dbf1f745160bca2b58a0f4f29ac422904fdd96b4": {
+    "name": "Employee",
+    "source": "query Employee($id: Int!) {\n  employee(id: $id) {\n    __typename\n    employee_name\n    employee_code\n    account {\n      __typename\n      firstname\n      lastname\n      email\n    }\n    role {\n      __typename\n      role_name\n    }\n  }\n}"
+  },
+  "27f8849fc7c9c61537a2145c0580d0278aaca0386ac393417bed0525e35a0e01": {
+    "name": "Employees",
+    "source": "query Employees {\n  employees {\n    __typename\n    id\n    employee_name\n  }\n}"
+  },
+  "db28f1c8123316dad1f800c4225ccf13af7683a00e3663e484def672ac8ed715": {
+    "name": "UpdateClient",
+    "source": "mutation UpdateClient($id: Int!, $input: ClientUpdateInput!) {\n  updateClient(id: $id, input: $input)\n}"
+  }
+}

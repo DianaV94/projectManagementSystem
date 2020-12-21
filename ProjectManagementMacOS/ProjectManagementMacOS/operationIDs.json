@@ -1,6 +1,0 @@
-{
-  "3558d07ccce7c58267f2e7b630ccfe277e7f06a7a6feb73b3f63b21ba427ab4b": {
-    "name": "Employees",
-    "source": "query Employees {\n  employees {\n    __typename\n    id\n    employee_code\n    employee_name\n    account {\n      __typename\n      id\n      email\n      firstname\n      lastname\n    }\n    role {\n      __typename\n      id\n      role_name\n    }\n  }\n}"
-  }
-}

@@ -1,16 +1,13 @@
-query Employees {
-  employees {
-    id
-    employee_code
+query Employee($id:Int!){
+  employee(id:$id) {
     employee_name
+    employee_code
     account {
-      id
-      email
       firstname
       lastname
+      email
     }
     role {
-      id
       role_name
     }
   }

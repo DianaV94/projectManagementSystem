@@ -13,7 +13,7 @@ let sourceRootURL = parentFolderOfScriptFile
 // From the source root, figure out where your target
 // root is within your main project
 let targetRootURL = sourceRootURL
-    .apollo.childFolderURL(folderName: "ProjectManagementMacOS")
+    .apollo.childFolderURL(folderName: "ProjectManagementMacOS").apollo.childFolderURL(folderName: "graphQL")
 
 // Set up the URL you want to use to download the project
 let endpoint = URL(string: "http://localhost:2003")!

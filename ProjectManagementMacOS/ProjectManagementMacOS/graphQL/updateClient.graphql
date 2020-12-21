@@ -1,0 +1,3 @@
+mutation UpdateClient($id: Int!, $input: ClientUpdateInput!) {
+  updateClient(id: $id, input: $input)
+}

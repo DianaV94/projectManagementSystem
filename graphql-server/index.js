@@ -87,10 +87,9 @@ const typeDefs = gql`
     project(id: Int): [Project]
 
     task(id: Int): Task
-    tasks(employee_id:Int): [Task]
 
     clients: [Client]
-    client_projects(id: Int): [Project]
+    client(id: Int!): Client
   }
 
   # Mutations
@@ -220,9 +219,9 @@ const typeDefs = gql`
     deleteActivity(id: Int!): [Activity]
     updateActivity(id: Int!, input: ActivityUpdateInput): Activity
 
-    createClient(input: ClientInput): [Client]
-    deleteClient(id: Int!): [Client]
-    updateClient(id: Int!, input: ClientUpdateInput): Client
+    createClient(input: ClientInput): Client
+    deleteClient(id: Int!): String
+    updateClient(id: Int!, input: ClientUpdateInput!): String
 
     createEmployee(input: EmployeeInput): Employee
     deleteEmployee(id: Int!): String
@@ -341,9 +340,7 @@ const resolvers = {
            return await request(employee_request)
         },
         employee: async (parent, {id}) => {
-          console.log(employee_by_id_request(id))
-          var result = await request(employee_by_id_request(id))
-          return result
+          return await request(employee_by_id_request(id))
         },
        
         projects: async (parent, args, context, info) => {
@@ -355,14 +352,11 @@ const resolvers = {
         task: async (parent, args, context, info) => {
           return (await query(`SELECT * FROM tasks.task WHERE id = ${args.id}`))[0]
         },
-        tasks: async (parent, args, context, info) => {
-          return await query(`SELECT * FROM tasks.task WHERE employee_id = ${args.employee_id}`)
-        },
         clients: async (parent, args, context, info) => {
           return await query(`SELECT * FROM projects.client`)
         },
-        client_projects: async (parent, args, context, info) => {
-          return await query(`SELECT * FROM projects.project WHERE client_id =  ${args.id}`)
+        client: async (parent, {id}, context, info) => {
+          return (await query(`SELECT * FROM projects.client WHERE id =  ${id}`))[0]
         }
     },
 
@@ -415,21 +409,22 @@ const resolvers = {
 
       createClient: async (parent, {input}, context, info) => {
         await query(`INSERT INTO projects.client (name, address, details, email) VALUES ('${input.name}', '${input.address}', '${input.details}', '${input.email}')`)
-        return await query(`SELECT * FROM projects.client`)
+        var result = await query(`SELECT * FROM projects.client ORDER BY id DESC LIMIT 1`)
+        return result[0]
       },
 
       deleteClient: async (parent, {id}, context, info) => {
         await query(`DELETE FROM projects.client WHERE id=${id}`)
-        return await query(`SELECT * FROM projects.client`)
+        return "success"
       },
       
       updateClient: async (parent, {id, input}, context, info) => {
         await query(`UPDATE projects.client SET ${ToSqlUpdateValues(input)} WHERE id=${id}`)
-        return (await query(`SELECT * FROM projects.client Where id=${id}`))[0]
+        return "Success"
       },
 
       deleteEmployee: async (parent, {id}, context, info) => {
-        var result = await request(employee_delete_request(id))
+        await request(employee_delete_request(id))
         return "success"
       },
 
