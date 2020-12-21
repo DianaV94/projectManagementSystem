@@ -81,7 +81,7 @@ const typeDefs = gql`
   # Queries
   type Query {
     employees: [Employee]
-    employee(name: String): Employee
+    employee(id: Int): Employee
     
     projects: [Project]
     project(id: Int): [Project]
@@ -312,7 +312,7 @@ function ToSqlUpdateValues (input)
 
 const request = require("request-promise");
 const employee_request = Request(Paths.Employees)
-const employee_by_name_request = RequestByQuery(Paths.Employees, "employee_name")
+const employee_by_id_request = RequestById(Paths.Employees, "GET")
 const employee_delete_request = RequestById(Paths.Employees, "DELETE")
 const employee_create_request = PostRequest(Paths.Employees)
 const employee_update_request = PutRequest(Paths.Employees)
@@ -338,17 +338,12 @@ const query = util.promisify(client.query).bind(client);
 const resolvers = {
     Query: {
         employees: async () => {
-          console.log(employee_request)
-           var result = await request(employee_request)
-           console.log(result)
-           console.log(result[0])
-           return result
+           return await request(employee_request)
         },
-        employee: async (parent, args) => {
-          var result = await request(employee_by_name_request(args.name))
-          console.log(result)
-          console.log(result[0])
-          return result[0]
+        employee: async (parent, {id}) => {
+          console.log(employee_by_id_request(id))
+          var result = await request(employee_by_id_request(id))
+          return result
         },
        
         projects: async (parent, args, context, info) => {
