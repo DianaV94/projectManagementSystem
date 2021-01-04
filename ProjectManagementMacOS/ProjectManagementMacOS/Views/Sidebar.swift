@@ -52,7 +52,7 @@ struct Sidebar: View {
                     }
                 case .employees:
                     NavigationLink(
-                        destination: EmployeesTableEntriesList(title: table.menuName)
+                        destination: EmployeesList()
                     ) {
                         Text(table.menuName).font(.headline)
                     }

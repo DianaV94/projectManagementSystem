@@ -3,6 +3,7 @@ query Employee($id:Int!){
     employee_name
     employee_code
     account {
+      id
       firstname
       lastname
       email

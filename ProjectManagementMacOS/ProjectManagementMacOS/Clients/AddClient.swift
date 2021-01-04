@@ -12,15 +12,7 @@ struct AddClient: View {
     @ObservedObject var clientDataStore: ClientsDataStore
         
     @State var client: AddClientData
-    
-//    init(clientDataStore: ClientsDataStore) {
-//        self.clientDataStore = clientDataStore
-////        name = ""
-////        email = ""
-////        address = ""
-////        details = ""
-//    }
-    
+        
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -49,10 +41,3 @@ struct AddClient: View {
         }.padding()
     }
 }
-
-//struct AccountsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AccountsView()
-//    }
-//}
-

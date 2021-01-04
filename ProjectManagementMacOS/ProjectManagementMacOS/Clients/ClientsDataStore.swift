@@ -44,7 +44,7 @@ final class ClientsDataStore: ObservableObject {
     
     init() {
         clients = .loading
-        Network.shared.apollo.fetch(query: ClientsQuery()) { result in
+        Network.shared.apollo.fetch(query: ClientsQuery(), cachePolicy: .fetchIgnoringCacheCompletely) { result in
             if let clients = try? result.get().data?.clients {
                 let filterterdClients = clients.compactMap { $0 }
                 self.clients = .loaded(filterterdClients.map(self.mapGQLClientToClientMetaInfo))
@@ -55,8 +55,7 @@ final class ClientsDataStore: ObservableObject {
     }
     
     func loadClient(id: Int) {
-//        currentClient = .loading
-        Network.shared.apollo.fetch(query: ClientQuery(id: id)) { result in
+        Network.shared.apollo.fetch(query: ClientQuery(id: id), cachePolicy: .fetchIgnoringCacheCompletely) { result in
             if let client = try? result.get().data?.client {
                 self.currentClient = .loaded(Client(name: client.name,
                                   email: client.email,

@@ -90,6 +90,8 @@ const typeDefs = gql`
 
     clients: [Client]
     client(id: Int!): Client
+
+    roles: [Role]
   }
 
   # Mutations
@@ -225,11 +227,11 @@ const typeDefs = gql`
 
     createEmployee(input: EmployeeInput): Employee
     deleteEmployee(id: Int!): String
-    updateEmployee(id: Int, input: EmployeeUpdateInput): Employee
+    updateEmployee(id: Int, input: EmployeeUpdateInput): String
 
     createUserAccount(input: UserAccountInput): UserAccount
     deleteUserAccount(id:Int!): String
-    updateUserAccount(id: Int, input: UserAccountUpdateInput): UserAccount
+    updateUserAccount(id: Int, input: UserAccountUpdateInput): String
 
     createRole(input: RoleInput): Role
     deleteRole(id:Int!): String
@@ -316,7 +318,7 @@ const employee_delete_request = RequestById(Paths.Employees, "DELETE")
 const employee_create_request = PostRequest(Paths.Employees)
 const employee_update_request = PutRequest(Paths.Employees)
 
-const role_request = Request(Paths.Roles)
+const roles_request = Request(Paths.Roles)
 const roles_by_id_request = RequestById(Paths.Roles, "GET")
 const roles_delete_request = RequestById(Paths.Roles, "DELETE")
 const roles_create_request = PostRequest(Paths.Roles)
@@ -356,7 +358,10 @@ const resolvers = {
           return await query(`SELECT * FROM projects.client`)
         },
         client: async (parent, {id}, context, info) => {
-          return (await query(`SELECT * FROM projects.client WHERE id =  ${id}`))[0]
+          return (await query(`SELECT * FROM projects.client WHERE id = ${id}`))[0]
+        },
+        roles: async () => {
+          return await request(roles_request)
         }
     },
 
@@ -433,7 +438,8 @@ const resolvers = {
       },
 
       updateEmployee: async (parent, {id, input}, context, info) => {
-        return await request(employee_update_request(id, input))
+        await request(employee_update_request(id, input))
+        return "Success"
       },
 
       deleteUserAccount: async (parent, {id}, context, info) => {
@@ -446,7 +452,8 @@ const resolvers = {
       },
 
       updateUserAccount: async (parent, {id, input}, context, info) => {
-        return await request(userAccount_update_request(id, input))
+        await request(userAccount_update_request(id, input))
+        return "Success"
       },
 
       deleteRole: async (parent, {id}, context, info) => {

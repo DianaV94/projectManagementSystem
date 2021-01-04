@@ -1,18 +1,11 @@
 {
   "employees": [
     {
-      "employee_code": "103",
+      "employee_code": "105",
       "employee_name": "anca",
       "account_id": 2,
-      "role_id": 2,
-      "id": 2
-    },
-    {
-      "employee_code": "104",
-      "employee_name": "adina",
-      "account_id": 3,
       "role_id": 5,
-      "id": 4
+      "id": 2
     }
   ],
   "roles": [
@@ -45,9 +38,9 @@
       "lastname": "Pop"
     },
     {
-      "email": "ghenadietest@gmail.com",
-      "firstname": "Ghenadie",
-      "lastname": "Test",
+      "email": "diana_anca@gmail.com",
+      "firstname": "Diana",
+      "lastname": "Vasiliev",
       "id": 2
     }
   ]

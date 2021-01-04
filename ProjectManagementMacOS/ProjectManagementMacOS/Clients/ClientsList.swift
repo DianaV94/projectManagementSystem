@@ -37,9 +37,3 @@ struct ClientsList: View {
     }
 }
 
-//struct TableEntriesList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TableEntriesList(title: "Name")
-//    }
-//}
-
