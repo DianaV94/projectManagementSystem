@@ -15,10 +15,10 @@ struct EmployeesList: View {
         case .loading:
             ProgressView()
         case let .loaded(employees):
-//            VStack {
-//                NavigationLink(destination: AddClient(clientDataStore: store, client: AddClientData())) {
-//                    Text("Add Employee")
-//                }
+            VStack {
+                NavigationLink(destination: AddEmployee(store: store, employee: AddEmployeeData())) {
+                    Text("Add Employee")
+                }
                 List() {
                     ForEach(employees,
                             id: \.id) { employee in
@@ -29,15 +29,9 @@ struct EmployeesList: View {
                         }
                             }
                 }
-//            }
+            }
         default:
             Text("Loading failed")
         }
     }
 }
-
-//struct TableEntriesList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TableEntriesList(title: "Name")
-//    }
-//}

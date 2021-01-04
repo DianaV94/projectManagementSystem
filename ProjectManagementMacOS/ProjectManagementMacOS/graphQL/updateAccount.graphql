@@ -1,0 +1,3 @@
+mutation UpdateAccount($id: Int!, $input: UserAccountUpdateInput!) {
+  updateUserAccount(id: $id, input: $input)
+}

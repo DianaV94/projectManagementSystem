@@ -4,6 +4,45 @@
 import Apollo
 import Foundation
 
+public struct UserAccountInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  /// - Parameters:
+  ///   - email
+  ///   - firstname
+  ///   - lastname
+  public init(email: String, firstname: String, lastname: String) {
+    graphQLMap = ["email": email, "firstname": firstname, "lastname": lastname]
+  }
+
+  public var email: String {
+    get {
+      return graphQLMap["email"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "email")
+    }
+  }
+
+  public var firstname: String {
+    get {
+      return graphQLMap["firstname"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "firstname")
+    }
+  }
+
+  public var lastname: String {
+    get {
+      return graphQLMap["lastname"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "lastname")
+    }
+  }
+}
+
 public struct ClientInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
@@ -49,6 +88,55 @@ public struct ClientInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "email")
+    }
+  }
+}
+
+public struct EmployeeInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  /// - Parameters:
+  ///   - employeeCode
+  ///   - employeeName
+  ///   - accountId
+  ///   - roleId
+  public init(employeeCode: String, employeeName: String, accountId: Int, roleId: Int) {
+    graphQLMap = ["employee_code": employeeCode, "employee_name": employeeName, "account_id": accountId, "role_id": roleId]
+  }
+
+  public var employeeCode: String {
+    get {
+      return graphQLMap["employee_code"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "employee_code")
+    }
+  }
+
+  public var employeeName: String {
+    get {
+      return graphQLMap["employee_name"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "employee_name")
+    }
+  }
+
+  public var accountId: Int {
+    get {
+      return graphQLMap["account_id"] as! Int
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "account_id")
+    }
+  }
+
+  public var roleId: Int {
+    get {
+      return graphQLMap["role_id"] as! Int
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "role_id")
     }
   }
 }
@@ -417,6 +505,101 @@ public final class ClientsQuery: GraphQLQuery {
   }
 }
 
+public final class CreateAccountMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation CreateAccount($input: UserAccountInput!) {
+      createUserAccount(input: $input) {
+        __typename
+        id
+      }
+    }
+    """
+
+  public let operationName: String = "CreateAccount"
+
+  public let operationIdentifier: String? = "ccda083cacc80f4d3fc99a56fd62d75ef66b501d17393a458faaea25c48d4649"
+
+  public var input: UserAccountInput
+
+  public init(input: UserAccountInput) {
+    self.input = input
+  }
+
+  public var variables: GraphQLMap? {
+    return ["input": input]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("createUserAccount", arguments: ["input": GraphQLVariable("input")], type: .object(CreateUserAccount.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(createUserAccount: CreateUserAccount? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "createUserAccount": createUserAccount.flatMap { (value: CreateUserAccount) -> ResultMap in value.resultMap }])
+    }
+
+    public var createUserAccount: CreateUserAccount? {
+      get {
+        return (resultMap["createUserAccount"] as? ResultMap).flatMap { CreateUserAccount(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "createUserAccount")
+      }
+    }
+
+    public struct CreateUserAccount: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["UserAccount"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: Int) {
+        self.init(unsafeResultMap: ["__typename": "UserAccount", "id": id])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: Int {
+        get {
+          return resultMap["id"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+    }
+  }
+}
+
 public final class CreateClientMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
@@ -517,6 +700,262 @@ public final class CreateClientMutation: GraphQLMutation {
         }
         set {
           resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+    }
+  }
+}
+
+public final class CreateEmployeeMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation CreateEmployee($input: EmployeeInput!) {
+      createEmployee(input: $input) {
+        __typename
+        id
+        employee_name
+        employee_code
+        account {
+          __typename
+          id
+          firstname
+          lastname
+          email
+        }
+        role {
+          __typename
+          role_name
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "CreateEmployee"
+
+  public let operationIdentifier: String? = "905cb83cae8134ad316a26a1ce66aa404cae13927853d3e1948e504aad75d02b"
+
+  public var input: EmployeeInput
+
+  public init(input: EmployeeInput) {
+    self.input = input
+  }
+
+  public var variables: GraphQLMap? {
+    return ["input": input]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("createEmployee", arguments: ["input": GraphQLVariable("input")], type: .object(CreateEmployee.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(createEmployee: CreateEmployee? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "createEmployee": createEmployee.flatMap { (value: CreateEmployee) -> ResultMap in value.resultMap }])
+    }
+
+    public var createEmployee: CreateEmployee? {
+      get {
+        return (resultMap["createEmployee"] as? ResultMap).flatMap { CreateEmployee(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "createEmployee")
+      }
+    }
+
+    public struct CreateEmployee: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["Employee"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("employee_name", type: .nonNull(.scalar(String.self))),
+          GraphQLField("employee_code", type: .nonNull(.scalar(String.self))),
+          GraphQLField("account", type: .nonNull(.object(Account.selections))),
+          GraphQLField("role", type: .nonNull(.object(Role.selections))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: Int, employeeName: String, employeeCode: String, account: Account, role: Role) {
+        self.init(unsafeResultMap: ["__typename": "Employee", "id": id, "employee_name": employeeName, "employee_code": employeeCode, "account": account.resultMap, "role": role.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: Int {
+        get {
+          return resultMap["id"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var employeeName: String {
+        get {
+          return resultMap["employee_name"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "employee_name")
+        }
+      }
+
+      public var employeeCode: String {
+        get {
+          return resultMap["employee_code"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "employee_code")
+        }
+      }
+
+      public var account: Account {
+        get {
+          return Account(unsafeResultMap: resultMap["account"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "account")
+        }
+      }
+
+      public var role: Role {
+        get {
+          return Role(unsafeResultMap: resultMap["role"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "role")
+        }
+      }
+
+      public struct Account: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["UserAccount"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+            GraphQLField("firstname", type: .nonNull(.scalar(String.self))),
+            GraphQLField("lastname", type: .nonNull(.scalar(String.self))),
+            GraphQLField("email", type: .nonNull(.scalar(String.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: Int, firstname: String, lastname: String, email: String) {
+          self.init(unsafeResultMap: ["__typename": "UserAccount", "id": id, "firstname": firstname, "lastname": lastname, "email": email])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: Int {
+          get {
+            return resultMap["id"]! as! Int
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        public var firstname: String {
+          get {
+            return resultMap["firstname"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "firstname")
+          }
+        }
+
+        public var lastname: String {
+          get {
+            return resultMap["lastname"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "lastname")
+          }
+        }
+
+        public var email: String {
+          get {
+            return resultMap["email"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "email")
+          }
+        }
+      }
+
+      public struct Role: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["Role"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("role_name", type: .nonNull(.scalar(String.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(roleName: String) {
+          self.init(unsafeResultMap: ["__typename": "Role", "role_name": roleName])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var roleName: String {
+          get {
+            return resultMap["role_name"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "role_name")
+          }
         }
       }
     }

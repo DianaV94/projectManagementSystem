@@ -31,6 +31,16 @@ struct Employee {
     }
 }
 
+ func setField<Root, Value>(kp: WritableKeyPath<Root, Value>) -> (Root) -> (Value) -> Root {
+    return { root in
+        return { value in
+            var newRoot = root
+            newRoot[keyPath: kp] = value
+            return newRoot
+        }
+    }
+}
+
 struct UpdateEmployeeData {
     var code: String = ""
     var userName: String = ""
@@ -112,6 +122,7 @@ final class EmployeesDataStore: ObservableObject {
         let lastName = data.lastName.wrappedIntoApolloOptional
         let email = data.email.wrappedIntoApolloOptional
         let code = data.code.wrappedIntoApolloOptional
+        let userName = data.userName.wrappedIntoApolloOptional
         
         let roleId: Optional<Int?> = {
             if let roleId = data.role?.id {
@@ -121,6 +132,7 @@ final class EmployeesDataStore: ObservableObject {
         }()
         
         let employeeUpdateInput = EmployeeUpdateInput(employeeCode: code,
+                                                      employeeName: userName,
                                                       roleId: roleId)
         
         let accountUpdateInput = UserAccountUpdateInput(email: email,
@@ -138,16 +150,54 @@ final class EmployeesDataStore: ObservableObject {
                     if let _ = try? result.get().data {
                         var newEmployee = oldEmploye
                         
-                        data.code.doOnNonempty(newEmployee.setField(kp: \.code))
-                        data.firstName.doOnNonempty(newEmployee.setField(kp: \.firstName))
-                        data.lastName.doOnNonempty(newEmployee.setField(kp: \.lastName))
-                        data.email.doOnNonempty(newEmployee.setField(kp: \.email))
+                        if data.code.isEmpty {
+                            newEmployee.code = data.code
+                        }
+                        
+                        if data.userName.isEmpty {
+                            newEmployee.userName = data.userName
+                        }
+                        
+                        if data.firstName.isEmpty {
+                            newEmployee.firstName = data.firstName
+                        }
+                        
+                        if data.lastName.isEmpty {
+                            newEmployee.lastName = data.lastName
+                        }
+                        
+                        if data.email.isEmpty {
+                            newEmployee.email = data.email
+                        }
                         data.role.flatMap { $0.name }.map(newEmployee.setField(kp: \.role))
 
                         self.currentEmployee = .loaded(newEmployee)
                     }
                 }
             }
+        }
+    }
+    
+    func addEmployee(_ data: AddEmployeeData) {
+        let addAccountInput = UserAccountInput(email: data.email,
+                                               firstname: data.firstName,
+                                               lastname: data.lastName)
+        
+        Network.shared.apollo.perform(mutation: CreateAccountMutation(input: addAccountInput)) { result in
+            if let accountId = (try? result.get().data)?.createUserAccount?.id  {
+                let addEmployeeInput = EmployeeInput(employeeCode: data.code,
+                                                     employeeName: data.userName,
+                                                     accountId: accountId,
+                                                     roleId: data.role!.id)
+                Network.shared.apollo.perform(mutation: CreateEmployeeMutation(input: addEmployeeInput)) { result in
+                    if let employee = (try? result.get().data)?.createEmployee {
+                        let employeeMetaInfo = EmployeeMetaInfo(id: employee.id, name: employee.employeeName)
+                        let currentEmployees = self.employees.data ?? []
+                        self.employees = .loaded([employeeMetaInfo] + currentEmployees)
+                    }
+                }
+            }
+            
         }
     }
     

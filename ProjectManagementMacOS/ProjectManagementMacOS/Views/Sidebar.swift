@@ -11,7 +11,6 @@ enum Table: CaseIterable {
     case projects
     case clients
     case employees
-    case accounts
     case roles
     
     var menuName: String {
@@ -22,8 +21,6 @@ enum Table: CaseIterable {
             return "Clients"
         case .employees:
             return "Employees"
-        case .accounts:
-            return "Accounts"
         case .roles:
             return "Roles"
         }
@@ -38,7 +35,7 @@ struct Sidebar: View {
             ForEach(Table.allCases,
                     id: \.self) { table in
                 switch table {
-                case .projects, .accounts, .roles:
+                case .projects, .roles:
                     NavigationLink(
                         destination: Text("Work in progress")
                     ) {

@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func doOnNonempty(_ f: (String) -> Void) {
+    func mapNonempty<T>(_ f: (String) -> T) {
         if !isEmpty {
             f(self)
         }

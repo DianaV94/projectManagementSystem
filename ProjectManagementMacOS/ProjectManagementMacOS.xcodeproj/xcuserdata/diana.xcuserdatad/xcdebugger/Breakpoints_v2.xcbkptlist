@@ -3,4 +3,133 @@
    uuid = "CACD1752-1269-405F-8341-7AC4BD670374"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectManagementMacOS/Roles/RolesDataStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1 - f976ed70d2f288f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;ProjectManagementMacOS.RolesQuery.Data&gt;, Swift.Error&gt;) -&gt; () in ProjectManagementMacOS.RolesDataStore.() -&gt; ProjectManagementMacOS.RolesDataStore(in _727A12C688C6A9BCAAAA7094CD473A8F).init() -&gt; ProjectManagementMacOS.RolesDataStore"
+                  moduleName = "ProjectManagementMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Roles/RolesDataStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1 - f976ed70d2f288f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;ProjectManagementMacOS.RolesQuery.Data&gt;, Swift.Error&gt;) -&gt; () in ProjectManagementMacOS.RolesDataStore.() -&gt; ProjectManagementMacOS.RolesDataStore(in _727A12C688C6A9BCAAAA7094CD473A8F).init() -&gt; ProjectManagementMacOS.RolesDataStore"
+                  moduleName = "ProjectManagementMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Roles/RolesDataStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1 - f976ed70d2f288f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;ProjectManagementMacOS.RolesQuery.Data&gt;, Swift.Error&gt;) -&gt; () in ProjectManagementMacOS.RolesDataStore.() -&gt; ProjectManagementMacOS.RolesDataStore(in _727A12C688C6A9BCAAAA7094CD473A8F).init() -&gt; ProjectManagementMacOS.RolesDataStore"
+                  moduleName = "ProjectManagementMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Roles/RolesDataStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1471">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92838B27-0290-4EE0-96F4-7303A7B407F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectManagementMacOS/Employees/AddEmployee.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44BB14FE-3E37-48C7-BB77-C2F79979D475"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectManagementMacOS/Employees/AddEmployee.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "44BB14FE-3E37-48C7-BB77-C2F79979D475 - e71ebda2c78dae58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;ProjectManagementMacOS.Role&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt; in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Menu&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;ProjectManagementMacOS.Role&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Group&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Group&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Menu&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;ProjectManagementMacOS.Role&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt; in ProjectManagementMacOS.AddEmployee.body.getter : some"
+                  moduleName = "ProjectManagementMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Employees/AddEmployee.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1446">
+               </Location>
+               <Location
+                  uuid = "44BB14FE-3E37-48C7-BB77-C2F79979D475 - a1e78bf6b3b69df5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ProjectManagementMacOS.Role) -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;ProjectManagementMacOS.Role&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt; in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Menu&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;ProjectManagementMacOS.Role&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Group&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Group&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Menu&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;ProjectManagementMacOS.Role&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt; in ProjectManagementMacOS.AddEmployee.body.getter : some"
+                  moduleName = "ProjectManagementMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Employees/AddEmployee.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

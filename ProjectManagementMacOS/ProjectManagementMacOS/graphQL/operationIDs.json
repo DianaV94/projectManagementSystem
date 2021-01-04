@@ -7,9 +7,17 @@
     "name": "Clients",
     "source": "query Clients {\n  clients {\n    __typename\n    id\n    name\n  }\n}"
   },
+  "ccda083cacc80f4d3fc99a56fd62d75ef66b501d17393a458faaea25c48d4649": {
+    "name": "CreateAccount",
+    "source": "mutation CreateAccount($input: UserAccountInput!) {\n  createUserAccount(input: $input) {\n    __typename\n    id\n  }\n}"
+  },
   "bf5ca550808244ee1f3b081802c481bb3368d1eb49934642c367ed62c8919da7": {
     "name": "CreateClient",
     "source": "mutation CreateClient($input: ClientInput) {\n  createClient(input: $input) {\n    __typename\n    id\n    name\n  }\n}"
+  },
+  "905cb83cae8134ad316a26a1ce66aa404cae13927853d3e1948e504aad75d02b": {
+    "name": "CreateEmployee",
+    "source": "mutation CreateEmployee($input: EmployeeInput!) {\n  createEmployee(input: $input) {\n    __typename\n    id\n    employee_name\n    employee_code\n    account {\n      __typename\n      id\n      firstname\n      lastname\n      email\n    }\n    role {\n      __typename\n      role_name\n    }\n  }\n}"
   },
   "6dd2900572e91000c57541b967fe697e0b7d92b9abf0819e8463096ace0954a1": {
     "name": "DeleteClient",
