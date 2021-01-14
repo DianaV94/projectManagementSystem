@@ -1,6 +1,6 @@
 mutation CreateEmployee($input: EmployeeInput!) {
   createEmployee(input: $input) {
-      id
+    id
     employee_name
     employee_code
     account {
@@ -10,6 +10,7 @@ mutation CreateEmployee($input: EmployeeInput!) {
       email
     }
     role {
+      id
       role_name
     }
   }

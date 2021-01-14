@@ -1,4 +1,16 @@
 {
+  "a456a29bc70d9b26e52ee18b9ff85c9b9671a5b8c4955e35a46f93ad6a9c513e": {
+    "name": "Activity",
+    "source": "query Activity($id: Int!) {\n  activity(id: $id) {\n    __typename\n    id\n    activity_name\n    description\n    start_date\n    end_date\n    priority\n    status\n    assigned {\n      __typename\n      id\n      employee_name\n      role {\n        __typename\n        id\n        role_name\n      }\n    }\n  }\n}"
+  },
+  "026c8292fa282a2b9c3d7d5cca90897e086a175dcd866aebadfcf5229a5c38a3": {
+    "name": "CreateProject",
+    "source": "mutation CreateProject($input: ProjectInput!) {\n  createProject(input: $input) {\n    __typename\n    id\n    project_name\n  }\n}"
+  },
+  "f586daf96df950ee59940376ad5690d5fd17ad14d41d367ed159989d7404ef2b": {
+    "name": "CreateTask",
+    "source": "mutation CreateTask($input: TaskInput!) {\n  createTask(input: $input) {\n    __typename\n    id\n    task_name\n    status\n  }\n}"
+  },
   "dfc5b789ea03265d608a7508d7bc75006b61d35d012788f175678bb466b08650": {
     "name": "Client",
     "source": "query Client($id: Int!) {\n  client(id: $id) {\n    __typename\n    name\n    address\n    email\n    details\n  }\n}"
@@ -11,13 +23,21 @@
     "name": "CreateAccount",
     "source": "mutation CreateAccount($input: UserAccountInput!) {\n  createUserAccount(input: $input) {\n    __typename\n    id\n  }\n}"
   },
+  "c4a4d0b24d9de81c1b4a4966093d59aae6430bb0b2438e6dcf9a9904e1098504": {
+    "name": "CreateActivity",
+    "source": "mutation CreateActivity($input: ActivityInput!) {\n  createActivity(input: $input) {\n    __typename\n    id\n    activity_name\n    status\n  }\n}"
+  },
   "bf5ca550808244ee1f3b081802c481bb3368d1eb49934642c367ed62c8919da7": {
     "name": "CreateClient",
     "source": "mutation CreateClient($input: ClientInput) {\n  createClient(input: $input) {\n    __typename\n    id\n    name\n  }\n}"
   },
-  "905cb83cae8134ad316a26a1ce66aa404cae13927853d3e1948e504aad75d02b": {
+  "555e0bb5696801abed52acbf63a0ef467775c524a967b15cb86a19da04210dc6": {
     "name": "CreateEmployee",
-    "source": "mutation CreateEmployee($input: EmployeeInput!) {\n  createEmployee(input: $input) {\n    __typename\n    id\n    employee_name\n    employee_code\n    account {\n      __typename\n      id\n      firstname\n      lastname\n      email\n    }\n    role {\n      __typename\n      role_name\n    }\n  }\n}"
+    "source": "mutation CreateEmployee($input: EmployeeInput!) {\n  createEmployee(input: $input) {\n    __typename\n    id\n    employee_name\n    employee_code\n    account {\n      __typename\n      id\n      firstname\n      lastname\n      email\n    }\n    role {\n      __typename\n      id\n      role_name\n    }\n  }\n}"
+  },
+  "02884e1abd1be53d8980beeb227ddabea3bbba068e340e6c55aa11bb5e6ac198": {
+    "name": "DeleteActivity",
+    "source": "mutation DeleteActivity($id: Int!) {\n  deleteActivity(id: $id)\n}"
   },
   "6dd2900572e91000c57541b967fe697e0b7d92b9abf0819e8463096ace0954a1": {
     "name": "DeleteClient",
@@ -27,21 +47,45 @@
     "name": "DeleteEmployee",
     "source": "mutation DeleteEmployee($id: Int!) {\n  deleteEmployee(id: $id)\n}"
   },
+  "59eaf3ef3659f17bb692cdd9f69d02a46d3895155c42e2e80269df7bd66950de": {
+    "name": "DeleteProject",
+    "source": "mutation DeleteProject($id: Int!) {\n  deleteProject(id: $id)\n}"
+  },
+  "c84cb15b078b38148e70eaae317aee8cfe20e819f1d35cca0d64989fe67f060d": {
+    "name": "DeleteTask",
+    "source": "mutation DeleteTask($id: Int!) {\n  deleteTask(id: $id)\n}"
+  },
   "0d8e8677adabf9dd91f29d64868210ad71986cda717285e6b47dd37ebf5e308c": {
     "name": "Employee",
     "source": "query Employee($id: Int!) {\n  employee(id: $id) {\n    __typename\n    employee_name\n    employee_code\n    account {\n      __typename\n      id\n      firstname\n      lastname\n      email\n    }\n    role {\n      __typename\n      role_name\n    }\n  }\n}"
   },
-  "27f8849fc7c9c61537a2145c0580d0278aaca0386ac393417bed0525e35a0e01": {
+  "9f378110fa9d528771c475bde853e5a54dbf813675b101f818e397f460776142": {
     "name": "Employees",
-    "source": "query Employees {\n  employees {\n    __typename\n    id\n    employee_name\n  }\n}"
+    "source": "query Employees {\n  employees {\n    __typename\n    id\n    employee_name\n    role {\n      __typename\n      id\n      role_name\n    }\n  }\n}"
+  },
+  "5b384db5aaf73b4bfee60ae205ec25522689782cf93403a317513a9edae35b3f": {
+    "name": "Project",
+    "source": "query Project($id: Int!) {\n  project(id: $id) {\n    __typename\n    id\n    project_name\n    project_descr\n    start_date\n    end_date\n    budget\n    manager {\n      __typename\n      id\n      employee_name\n      role {\n        __typename\n        id\n        role_name\n      }\n    }\n    client {\n      __typename\n      id\n      name\n    }\n    tasks {\n      __typename\n      id\n      task_name\n      status\n    }\n  }\n}"
+  },
+  "6e091edd4e7ab317fcbfcb1f81d0a60c51ae2fcaedbc3c0e5a6646a70c6849ec": {
+    "name": "Projects",
+    "source": "query Projects {\n  projects {\n    __typename\n    id\n    project_name\n  }\n}"
   },
   "1ccdfd49c3c6762bcd7c02b3f4ee05f6b17392ab6d4f31b0192c25df3126af6b": {
     "name": "Roles",
     "source": "query Roles {\n  roles {\n    __typename\n    id\n    role_name\n  }\n}"
   },
+  "71179954ea5c2d8b1916b3ef7142320ad7e6ac24545b8697671113aca69dc4fb": {
+    "name": "Task",
+    "source": "query Task($id: Int!) {\n  task(id: $id) {\n    __typename\n    id\n    task_name\n    description\n    start_date\n    end_date\n    priority\n    status\n    assigned {\n      __typename\n      id\n      employee_name\n      role {\n        __typename\n        id\n        role_name\n      }\n    }\n    activities {\n      __typename\n      id\n      activity_name\n      status\n    }\n  }\n}"
+  },
   "7be429dc5c172605f139a781579092aa6e6a499e2ea9cb60e9d9b46c1641070e": {
     "name": "UpdateAccount",
     "source": "mutation UpdateAccount($id: Int!, $input: UserAccountUpdateInput!) {\n  updateUserAccount(id: $id, input: $input)\n}"
+  },
+  "36586b7f74782acd30de1703c7f38b96ddfb95fb7432a2223c321aba445d7df9": {
+    "name": "UpdateActivity",
+    "source": "mutation UpdateActivity($id: Int!, $input: ActivityUpdateInput!) {\n  updateActivity(id: $id, input: $input)\n}"
   },
   "db28f1c8123316dad1f800c4225ccf13af7683a00e3663e484def672ac8ed715": {
     "name": "UpdateClient",
@@ -50,5 +94,13 @@
   "814c2eed994c800da4cbdb3347fcca0e9d4babf34a672f7a2e3bac29f214a1ba": {
     "name": "UpdateEmployee",
     "source": "mutation UpdateEmployee($id: Int!, $input: EmployeeUpdateInput!) {\n  updateEmployee(id: $id, input: $input)\n}"
+  },
+  "9bd9d1342c315e287eb102de89ea090a169ff5e67b29e05bf916e53d61709b65": {
+    "name": "UpdateProject",
+    "source": "mutation UpdateProject($id: Int!, $input: ProjectUpdateInput!) {\n  updateProject(id: $id, input: $input)\n}"
+  },
+  "cc12fb8cc7865a7450e7a1ce0fdcccb432a6bab757c585587347a04cdc1a59a2": {
+    "name": "UpdateTask",
+    "source": "mutation UpdateTask($id: Int!, $input: TaskUpdateInput!) {\n  updateTask(id: $id, input: $input)\n}"
   }
 }

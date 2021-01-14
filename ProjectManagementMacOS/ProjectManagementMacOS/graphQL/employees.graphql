@@ -2,5 +2,9 @@ query Employees {
   employees {
     id
     employee_name
+    role {
+      id
+      role_name
+    }
   }
 }

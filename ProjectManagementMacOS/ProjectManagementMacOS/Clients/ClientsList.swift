@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClientsList: View {
-    @ObservedObject var store: ClientsDataStore = ClientsDataStore()
+    @ObservedObject var store: ClientsDataStore = ClientsDataStore.instance
     
     var body: some View {
         switch store.clients {

@@ -1,0 +1,27 @@
+query Project($id:Int!) {
+  project(id: $id) {
+    id
+    project_name
+    project_descr
+    start_date
+    end_date 
+    budget
+    manager {
+      id
+      employee_name
+      role {
+        id
+        role_name
+      }
+    }
+    client {
+      id
+      name
+    }
+    tasks {
+      id
+      task_name
+      status
+    }
+  }
+}

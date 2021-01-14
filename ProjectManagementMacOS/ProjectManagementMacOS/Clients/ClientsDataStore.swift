@@ -42,7 +42,8 @@ final class ClientsDataStore: ObservableObject {
     @Published var clients: DataState<[ClientMetaInfo]> = .initial
     @Published var currentClient: DataState<Client> = .initial
     
-    init() {
+    static let instance = ClientsDataStore()
+    private init() {
         clients = .loading
         Network.shared.apollo.fetch(query: ClientsQuery(), cachePolicy: .fetchIgnoringCacheCompletely) { result in
             if let clients = try? result.get().data?.clients {

@@ -15,69 +15,88 @@ struct ClientDetails: View {
     @State var isEditMode: Bool = false
     @State var editData: UpdateClientData = UpdateClientData()
     
-    
     let id: Int
+    let isEditable: Bool
     
     init(id: Int,
+         isEditable: Bool = true,
          store: ClientsDataStore) {
         self.id = id
+        self.isEditable = isEditable
         self.store = store
     }
-
+    
     var body: some View {
         if isRemoved {
-             Text("Deleted")
+            HStack {
+                VStack {
+                    Text("Deleted")
+                    Spacer()
+                }
+                Spacer()
+            }
         }
         else if isEditMode {
-             VStack(alignment: .leading) {
-                Text("Client name")
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Client name")
                         .font(.callout)
                         .bold()
-                TextField(store.currentClient.data!.name, text: $editData.name) .textFieldStyle(RoundedBorderTextFieldStyle())
-                Text("Client email")
+                    TextField(store.currentClient.data!.name, text: $editData.name) .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Text("Client email")
                         .font(.callout)
                         .bold()
-                TextField(store.currentClient.data!.email, text: $editData.email) .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Text("Client address")
-                        .font(.callout)
-                        .bold()
-                TextField(store.currentClient.data!.address, text: $editData.address) .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Text("Client details")
-                        .font(.callout)
-                        .bold()
-                TextField(store.currentClient.data!.details, text: $editData.details) .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button("Update") {
-                    store.updateClient(id: id, data: editData)
-                    self.isEditMode = false
+                    TextField(store.currentClient.data!.email, text: $editData.email) .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Group {
+                        Text("Client address")
+                            .font(.callout)
+                            .bold()
+                        TextField(store.currentClient.data!.address, text: $editData.address) .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        Text("Client details")
+                            .font(.callout)
+                            .bold()
+                        TextField(store.currentClient.data!.details, text: $editData.details) .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        Button("Update") {
+                            store.updateClient(id: id, data: editData)
+                            self.isEditMode = false
+                        }
+                        Button("Cancel") {
+                            self.isEditMode = false
+                        }
+                        Spacer()
+                    }
                 }
-                Button("Cancel") {
-                    self.isEditMode = false
-                }
+                Spacer()
             }.padding()
         } else {
             switch store.currentClient {
             case .initial,
                  .loading:
-                 ProgressView()
+                ProgressView()
             case let .loaded(client):
-                VStack(alignment: .leading) {
-                    Text("Name: \(client.name)")
-                    Text("Email: \(client.email)")
-                    Text("Details: \(client.details)")
-                    Text("Address: \(client.address)")
-                    Button("Delete") {
-                        self.store.deleteClient(id)
-                        isRemoved = true
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Name: \(client.name)")
+                        Text("Email: \(client.email)")
+                        Text("Details: \(client.details)")
+                        Text("Address: \(client.address)")
+                        if isEditable {
+                            Button("Delete") {
+                                self.store.deleteClient(id)
+                                isRemoved = true
+                            }
+                            Button("Edit") {
+                                isEditMode = true
+                            }
+                        }
+                        Spacer()
                     }
-                    Button("Edit") {
-                        isEditMode = true
-                    }
-                 }.padding()
+                    Spacer()
+                }.padding()
             default:
-                 Text("Loading failed")
+                Text("Loading failed")
             }
         }
     }

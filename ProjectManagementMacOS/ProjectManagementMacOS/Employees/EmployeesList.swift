@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EmployeesList: View {
-    @ObservedObject var store: EmployeesDataStore = EmployeesDataStore()
+    @ObservedObject var store: EmployeesDataStore = EmployeesDataStore.instance
     
     var body: some View {
         switch store.employees {

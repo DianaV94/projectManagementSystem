@@ -14,8 +14,8 @@ struct ContentView: View {
         NavigationView {
             Sidebar(selectedtable: $selectedTable)
             Text("Work in progress")
-            Text("Work in progress")
-        }.frame(width: 1000, height: 600, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            Text("No Data")
+        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
 }
 

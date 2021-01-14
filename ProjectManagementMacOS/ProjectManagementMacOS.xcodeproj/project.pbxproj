@@ -22,11 +22,8 @@
 		8473B3FA258D42A900E6CD0D /* EmployeesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B3F9258D42A900E6CD0D /* EmployeesDataStore.swift */; };
 		8473B417258E6C5A00E6CD0D /* operationIDs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8473B413258E6C5A00E6CD0D /* operationIDs.json */; };
 		8473B418258E6C5A00E6CD0D /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 8473B414258E6C5A00E6CD0D /* schema.json */; };
-		8473B419258E6C5A00E6CD0D /* employees.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8473B415258E6C5A00E6CD0D /* employees.graphql */; };
 		8473B41A258E6C5A00E6CD0D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B416258E6C5A00E6CD0D /* API.swift */; };
 		8473B42B25911E7D00E6CD0D /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B42A25911E7D00E6CD0D /* DataState.swift */; };
-		8473B43D2591251300E6CD0D /* employee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8473B43C2591251300E6CD0D /* employee.graphql */; };
-		8473B45A25912FE500E6CD0D /* deleteEmployee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8473B45925912FE500E6CD0D /* deleteEmployee.graphql */; };
 		8473B46325913CFF00E6CD0D /* ClientsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B46225913CFF00E6CD0D /* ClientsDataStore.swift */; };
 		8473B46B25913E5500E6CD0D /* ClientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B46A25913E5500E6CD0D /* ClientsList.swift */; };
 		8473B479259140E600E6CD0D /* AddClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473B478259140E600E6CD0D /* AddClient.swift */; };
@@ -39,8 +36,38 @@
 		8493DA59259B71C50002A1D3 /* updateClient.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8493DA54259B71C50002A1D3 /* updateClient.graphql */; };
 		8493DA5E259B7B020002A1D3 /* roles.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8493DA5D259B7B020002A1D3 /* roles.graphql */; };
 		8493DA64259B7B5C0002A1D3 /* RolesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DA63259B7B5C0002A1D3 /* RolesDataStore.swift */; };
-		8493DA6A259B7FED0002A1D3 /* updateEmployee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8493DA68259B7FED0002A1D3 /* updateEmployee.graphql */; };
 		8493DA6B259B7FED0002A1D3 /* updateAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8493DA69259B7FED0002A1D3 /* updateAccount.graphql */; };
+		84B11AA025A9E0F6007461C4 /* ProjectsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11A9F25A9E0F6007461C4 /* ProjectsDataStore.swift */; };
+		84B11AA525A9E10B007461C4 /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11AA425A9E10B007461C4 /* ProjectsList.swift */; };
+		84B11AAC25A9E235007461C4 /* projects.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11AA925A9E235007461C4 /* projects.graphql */; };
+		84B11ABE25A9E2A2007461C4 /* createAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11AB825A9E2A2007461C4 /* createAccount.graphql */; };
+		84B11ABF25A9E2A2007461C4 /* employees.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11AB925A9E2A2007461C4 /* employees.graphql */; };
+		84B11AC025A9E2A2007461C4 /* createEmployee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11ABA25A9E2A2007461C4 /* createEmployee.graphql */; };
+		84B11AC125A9E2A2007461C4 /* deleteEmployee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11ABB25A9E2A2007461C4 /* deleteEmployee.graphql */; };
+		84B11AC225A9E2A2007461C4 /* updateEmployee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11ABC25A9E2A2007461C4 /* updateEmployee.graphql */; };
+		84B11AC325A9E2A2007461C4 /* employee.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11ABD25A9E2A2007461C4 /* employee.graphql */; };
+		84B11AD125A9E723007461C4 /* AddProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11AD025A9E723007461C4 /* AddProject.swift */; };
+		84B11AD625A9E7BA007461C4 /* addProject.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11AD525A9E7BA007461C4 /* addProject.graphql */; };
+		84B11ADB25AA013C007461C4 /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11ADA25AA013C007461C4 /* ProjectDetails.swift */; };
+		84B11AE025AA027C007461C4 /* project.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11ADF25AA027C007461C4 /* project.graphql */; };
+		84B11AE525AA2665007461C4 /* PDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11AE425AA2665007461C4 /* PDetails.swift */; };
+		84B11AFD25AAF100007461C4 /* deleteProject.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11AFC25AAF100007461C4 /* deleteProject.graphql */; };
+		84B11B0225AAF2A5007461C4 /* EditProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B0125AAF2A5007461C4 /* EditProject.swift */; };
+		84B11B0725AAF453007461C4 /* updateProject.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B0625AAF453007461C4 /* updateProject.graphql */; };
+		84B11B0F25AAF9C1007461C4 /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B0E25AAF9C1007461C4 /* CreateTask.swift */; };
+		84B11B1425AAFD0A007461C4 /* addTask.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B1325AAFD0A007461C4 /* addTask.graphql */; };
+		84B11B1925AB06A9007461C4 /* TaskDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B1825AB06A9007461C4 /* TaskDetails.swift */; };
+		84B11B1E25AB075F007461C4 /* task.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B1D25AB075F007461C4 /* task.graphql */; };
+		84B11B2325AB21E5007461C4 /* deleteTask.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B2225AB21E5007461C4 /* deleteTask.graphql */; };
+		84B11B2825AB22FD007461C4 /* EditTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B2725AB22FD007461C4 /* EditTask.swift */; };
+		84B11B2D25AB24DD007461C4 /* updateTask.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B2C25AB24DD007461C4 /* updateTask.graphql */; };
+		84B11B3225AB27D5007461C4 /* AddSubtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B3125AB27D5007461C4 /* AddSubtask.swift */; };
+		84B11B4725AB2970007461C4 /* createActivity.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B4625AB2970007461C4 /* createActivity.graphql */; };
+		84B11B4C25AB3402007461C4 /* SubtaskDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B4B25AB3402007461C4 /* SubtaskDetails.swift */; };
+		84B11B5125AB34DA007461C4 /* activity.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B5025AB34DA007461C4 /* activity.graphql */; };
+		84B11B5625AB381F007461C4 /* deleteActivity.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B5525AB381F007461C4 /* deleteActivity.graphql */; };
+		84B11B5B25AB38BF007461C4 /* EditSubtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B11B5A25AB38BF007461C4 /* EditSubtask.swift */; };
+		84B11B6025AB38FF007461C4 /* updateActivity.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84B11B5F25AB38FF007461C4 /* updateActivity.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,11 +109,8 @@
 		8473B3F9258D42A900E6CD0D /* EmployeesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesDataStore.swift; sourceTree = "<group>"; };
 		8473B413258E6C5A00E6CD0D /* operationIDs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = operationIDs.json; sourceTree = "<group>"; };
 		8473B414258E6C5A00E6CD0D /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		8473B415258E6C5A00E6CD0D /* employees.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = employees.graphql; sourceTree = "<group>"; };
 		8473B416258E6C5A00E6CD0D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8473B42A25911E7D00E6CD0D /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
-		8473B43C2591251300E6CD0D /* employee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = employee.graphql; sourceTree = "<group>"; };
-		8473B45925912FE500E6CD0D /* deleteEmployee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deleteEmployee.graphql; sourceTree = "<group>"; };
 		8473B46225913CFF00E6CD0D /* ClientsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsDataStore.swift; sourceTree = "<group>"; };
 		8473B46A25913E5500E6CD0D /* ClientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsList.swift; sourceTree = "<group>"; };
 		8473B478259140E600E6CD0D /* AddClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClient.swift; sourceTree = "<group>"; };
@@ -99,8 +123,38 @@
 		8493DA54259B71C50002A1D3 /* updateClient.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updateClient.graphql; sourceTree = "<group>"; };
 		8493DA5D259B7B020002A1D3 /* roles.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = roles.graphql; sourceTree = "<group>"; };
 		8493DA63259B7B5C0002A1D3 /* RolesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolesDataStore.swift; sourceTree = "<group>"; };
-		8493DA68259B7FED0002A1D3 /* updateEmployee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updateEmployee.graphql; sourceTree = "<group>"; };
 		8493DA69259B7FED0002A1D3 /* updateAccount.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updateAccount.graphql; sourceTree = "<group>"; };
+		84B11A9F25A9E0F6007461C4 /* ProjectsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsDataStore.swift; sourceTree = "<group>"; };
+		84B11AA425A9E10B007461C4 /* ProjectsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
+		84B11AA925A9E235007461C4 /* projects.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = projects.graphql; sourceTree = "<group>"; };
+		84B11AB825A9E2A2007461C4 /* createAccount.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = createAccount.graphql; sourceTree = "<group>"; };
+		84B11AB925A9E2A2007461C4 /* employees.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = employees.graphql; sourceTree = "<group>"; };
+		84B11ABA25A9E2A2007461C4 /* createEmployee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = createEmployee.graphql; sourceTree = "<group>"; };
+		84B11ABB25A9E2A2007461C4 /* deleteEmployee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deleteEmployee.graphql; sourceTree = "<group>"; };
+		84B11ABC25A9E2A2007461C4 /* updateEmployee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updateEmployee.graphql; sourceTree = "<group>"; };
+		84B11ABD25A9E2A2007461C4 /* employee.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = employee.graphql; sourceTree = "<group>"; };
+		84B11AD025A9E723007461C4 /* AddProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProject.swift; sourceTree = "<group>"; };
+		84B11AD525A9E7BA007461C4 /* addProject.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = addProject.graphql; sourceTree = "<group>"; };
+		84B11ADA25AA013C007461C4 /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
+		84B11ADF25AA027C007461C4 /* project.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = project.graphql; sourceTree = "<group>"; };
+		84B11AE425AA2665007461C4 /* PDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDetails.swift; sourceTree = "<group>"; };
+		84B11AFC25AAF100007461C4 /* deleteProject.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = deleteProject.graphql; sourceTree = "<group>"; };
+		84B11B0125AAF2A5007461C4 /* EditProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProject.swift; sourceTree = "<group>"; };
+		84B11B0625AAF453007461C4 /* updateProject.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = updateProject.graphql; sourceTree = "<group>"; };
+		84B11B0E25AAF9C1007461C4 /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
+		84B11B1325AAFD0A007461C4 /* addTask.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = addTask.graphql; sourceTree = "<group>"; };
+		84B11B1825AB06A9007461C4 /* TaskDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetails.swift; sourceTree = "<group>"; };
+		84B11B1D25AB075F007461C4 /* task.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = task.graphql; sourceTree = "<group>"; };
+		84B11B2225AB21E5007461C4 /* deleteTask.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = deleteTask.graphql; sourceTree = "<group>"; };
+		84B11B2725AB22FD007461C4 /* EditTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTask.swift; sourceTree = "<group>"; };
+		84B11B2C25AB24DD007461C4 /* updateTask.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = updateTask.graphql; sourceTree = "<group>"; };
+		84B11B3125AB27D5007461C4 /* AddSubtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubtask.swift; sourceTree = "<group>"; };
+		84B11B4625AB2970007461C4 /* createActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = createActivity.graphql; sourceTree = "<group>"; };
+		84B11B4B25AB3402007461C4 /* SubtaskDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskDetails.swift; sourceTree = "<group>"; };
+		84B11B5025AB34DA007461C4 /* activity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = activity.graphql; sourceTree = "<group>"; };
+		84B11B5525AB381F007461C4 /* deleteActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = deleteActivity.graphql; sourceTree = "<group>"; };
+		84B11B5A25AB38BF007461C4 /* EditSubtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSubtask.swift; sourceTree = "<group>"; };
+		84B11B5F25AB38FF007461C4 /* updateActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = updateActivity.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +206,7 @@
 		8473B3A3258D1C7200E6CD0D /* ProjectManagementMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				84B11A9E25A9E0E6007461C4 /* Projects */,
 				8493DA62259B7B4F0002A1D3 /* Roles */,
 				8473B46125913CF600E6CD0D /* Clients */,
 				8473B4442591268600E6CD0D /* Employees */,
@@ -198,19 +253,12 @@
 		8473B412258E6C5A00E6CD0D /* graphQL */ = {
 			isa = PBXGroup;
 			children = (
-				8493DA69259B7FED0002A1D3 /* updateAccount.graphql */,
-				8493DA68259B7FED0002A1D3 /* updateEmployee.graphql */,
+				84B11AC925A9E2C3007461C4 /* Projects */,
+				84B11AC825A9E2AF007461C4 /* Clients */,
+				84B11AB725A9E293007461C4 /* Employees */,
 				8493DA5D259B7B020002A1D3 /* roles.graphql */,
-				8493DA53259B71C50002A1D3 /* client.graphql */,
-				8493DA50259B71C50002A1D3 /* clients.graphql */,
-				8493DA52259B71C50002A1D3 /* createClient.graphql */,
-				8493DA51259B71C50002A1D3 /* deleteClient.graphql */,
-				8493DA54259B71C50002A1D3 /* updateClient.graphql */,
-				8473B45925912FE500E6CD0D /* deleteEmployee.graphql */,
 				8473B413258E6C5A00E6CD0D /* operationIDs.json */,
 				8473B414258E6C5A00E6CD0D /* schema.json */,
-				8473B415258E6C5A00E6CD0D /* employees.graphql */,
-				8473B43C2591251300E6CD0D /* employee.graphql */,
 				8473B416258E6C5A00E6CD0D /* API.swift */,
 			);
 			path = graphQL;
@@ -253,6 +301,71 @@
 				8493DA63259B7B5C0002A1D3 /* RolesDataStore.swift */,
 			);
 			path = Roles;
+			sourceTree = "<group>";
+		};
+		84B11A9E25A9E0E6007461C4 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				84B11AD025A9E723007461C4 /* AddProject.swift */,
+				84B11B0E25AAF9C1007461C4 /* CreateTask.swift */,
+				84B11B0125AAF2A5007461C4 /* EditProject.swift */,
+				84B11B2725AB22FD007461C4 /* EditTask.swift */,
+				84B11AE425AA2665007461C4 /* PDetails.swift */,
+				84B11B3125AB27D5007461C4 /* AddSubtask.swift */,
+				84B11ADA25AA013C007461C4 /* ProjectDetails.swift */,
+				84B11A9F25A9E0F6007461C4 /* ProjectsDataStore.swift */,
+				84B11AA425A9E10B007461C4 /* ProjectsList.swift */,
+				84B11B1825AB06A9007461C4 /* TaskDetails.swift */,
+				84B11B4B25AB3402007461C4 /* SubtaskDetails.swift */,
+				84B11B5A25AB38BF007461C4 /* EditSubtask.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		84B11AB725A9E293007461C4 /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				8493DA69259B7FED0002A1D3 /* updateAccount.graphql */,
+				84B11AB825A9E2A2007461C4 /* createAccount.graphql */,
+				84B11ABA25A9E2A2007461C4 /* createEmployee.graphql */,
+				84B11ABB25A9E2A2007461C4 /* deleteEmployee.graphql */,
+				84B11ABD25A9E2A2007461C4 /* employee.graphql */,
+				84B11AB925A9E2A2007461C4 /* employees.graphql */,
+				84B11ABC25A9E2A2007461C4 /* updateEmployee.graphql */,
+			);
+			name = Employees;
+			sourceTree = "<group>";
+		};
+		84B11AC825A9E2AF007461C4 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				8493DA53259B71C50002A1D3 /* client.graphql */,
+				8493DA50259B71C50002A1D3 /* clients.graphql */,
+				8493DA52259B71C50002A1D3 /* createClient.graphql */,
+				8493DA51259B71C50002A1D3 /* deleteClient.graphql */,
+				8493DA54259B71C50002A1D3 /* updateClient.graphql */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		84B11AC925A9E2C3007461C4 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				84B11AA925A9E235007461C4 /* projects.graphql */,
+				84B11B5F25AB38FF007461C4 /* updateActivity.graphql */,
+				84B11B5025AB34DA007461C4 /* activity.graphql */,
+				84B11B4625AB2970007461C4 /* createActivity.graphql */,
+				84B11B5525AB381F007461C4 /* deleteActivity.graphql */,
+				84B11ADF25AA027C007461C4 /* project.graphql */,
+				84B11AFC25AAF100007461C4 /* deleteProject.graphql */,
+				84B11B1D25AB075F007461C4 /* task.graphql */,
+				84B11AD525A9E7BA007461C4 /* addProject.graphql */,
+				84B11B0625AAF453007461C4 /* updateProject.graphql */,
+				84B11B1325AAFD0A007461C4 /* addTask.graphql */,
+				84B11B2225AB21E5007461C4 /* deleteTask.graphql */,
+				84B11B2C25AB24DD007461C4 /* updateTask.graphql */,
+			);
+			name = Projects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,20 +479,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				8493DA58259B71C50002A1D3 /* client.graphql in Resources */,
+				84B11AC325A9E2A2007461C4 /* employee.graphql in Resources */,
+				84B11B5125AB34DA007461C4 /* activity.graphql in Resources */,
+				84B11AC225A9E2A2007461C4 /* updateEmployee.graphql in Resources */,
 				8493DA57259B71C50002A1D3 /* createClient.graphql in Resources */,
-				8493DA6A259B7FED0002A1D3 /* updateEmployee.graphql in Resources */,
-				8473B419258E6C5A00E6CD0D /* employees.graphql in Resources */,
-				8473B43D2591251300E6CD0D /* employee.graphql in Resources */,
 				8473B418258E6C5A00E6CD0D /* schema.json in Resources */,
-				8473B45A25912FE500E6CD0D /* deleteEmployee.graphql in Resources */,
+				84B11AAC25A9E235007461C4 /* projects.graphql in Resources */,
 				8473B417258E6C5A00E6CD0D /* operationIDs.json in Resources */,
 				8493DA59259B71C50002A1D3 /* updateClient.graphql in Resources */,
+				84B11AC125A9E2A2007461C4 /* deleteEmployee.graphql in Resources */,
+				84B11B4725AB2970007461C4 /* createActivity.graphql in Resources */,
+				84B11B0725AAF453007461C4 /* updateProject.graphql in Resources */,
+				84B11B2325AB21E5007461C4 /* deleteTask.graphql in Resources */,
 				8493DA5E259B7B020002A1D3 /* roles.graphql in Resources */,
+				84B11AC025A9E2A2007461C4 /* createEmployee.graphql in Resources */,
+				84B11B1E25AB075F007461C4 /* task.graphql in Resources */,
 				8473B3AC258D1C7300E6CD0D /* Preview Assets.xcassets in Resources */,
+				84B11AD625A9E7BA007461C4 /* addProject.graphql in Resources */,
 				8493DA55259B71C50002A1D3 /* clients.graphql in Resources */,
+				84B11B2D25AB24DD007461C4 /* updateTask.graphql in Resources */,
+				84B11B6025AB38FF007461C4 /* updateActivity.graphql in Resources */,
+				84B11ABF25A9E2A2007461C4 /* employees.graphql in Resources */,
 				8493DA6B259B7FED0002A1D3 /* updateAccount.graphql in Resources */,
 				8473B3A9258D1C7300E6CD0D /* Assets.xcassets in Resources */,
+				84B11ABE25A9E2A2007461C4 /* createAccount.graphql in Resources */,
+				84B11B1425AAFD0A007461C4 /* addTask.graphql in Resources */,
 				8493DA56259B71C50002A1D3 /* deleteClient.graphql in Resources */,
+				84B11AE025AA027C007461C4 /* project.graphql in Resources */,
+				84B11B5625AB381F007461C4 /* deleteActivity.graphql in Resources */,
+				84B11AFD25AAF100007461C4 /* deleteProject.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,21 +553,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				8473B46B25913E5500E6CD0D /* ClientsList.swift in Sources */,
+				84B11AA025A9E0F6007461C4 /* ProjectsDataStore.swift in Sources */,
 				8473B3FA258D42A900E6CD0D /* EmployeesDataStore.swift in Sources */,
+				84B11AD125A9E723007461C4 /* AddProject.swift in Sources */,
 				8473B3F0258D320800E6CD0D /* Sidebar.swift in Sources */,
+				84B11B1925AB06A9007461C4 /* TaskDetails.swift in Sources */,
+				84B11B0F25AAF9C1007461C4 /* CreateTask.swift in Sources */,
 				8473B3A7258D1C7200E6CD0D /* ContentView.swift in Sources */,
 				8473B3F5258D362F00E6CD0D /* EmployeesList.swift in Sources */,
 				8473B42B25911E7D00E6CD0D /* DataState.swift in Sources */,
+				84B11B2825AB22FD007461C4 /* EditTask.swift in Sources */,
+				84B11B5B25AB38BF007461C4 /* EditSubtask.swift in Sources */,
+				84B11ADB25AA013C007461C4 /* ProjectDetails.swift in Sources */,
 				8473B3E8258D25B700E6CD0D /* Network.swift in Sources */,
 				8407070025A38A33002C4EA1 /* Utils.swift in Sources */,
 				8473B41A258E6C5A00E6CD0D /* API.swift in Sources */,
 				840706FB25A389EA002C4EA1 /* AddEmployee.swift in Sources */,
 				8473B484259147FD00E6CD0D /* ClientDetails.swift in Sources */,
 				8493DA64259B7B5C0002A1D3 /* RolesDataStore.swift in Sources */,
+				84B11AE525AA2665007461C4 /* PDetails.swift in Sources */,
+				84B11B3225AB27D5007461C4 /* AddSubtask.swift in Sources */,
+				84B11B4C25AB3402007461C4 /* SubtaskDetails.swift in Sources */,
 				8473B479259140E600E6CD0D /* AddClient.swift in Sources */,
+				84B11B0225AAF2A5007461C4 /* EditProject.swift in Sources */,
 				848CD644259B6E7800A41C91 /* EmployeeDetails.swift in Sources */,
 				8473B46325913CFF00E6CD0D /* ClientsDataStore.swift in Sources */,
 				8473B3A5258D1C7200E6CD0D /* ProjectManagementMacOSApp.swift in Sources */,
+				84B11AA525A9E10B007461C4 /* ProjectsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

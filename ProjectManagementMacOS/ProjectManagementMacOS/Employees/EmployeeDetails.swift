@@ -16,10 +16,13 @@ struct EmployeeDetails: View {
     @State var editData: UpdateEmployeeData = UpdateEmployeeData()
     
     let id: Int
+    let isEditable: Bool
     
     init(id: Int,
+         isEditable: Bool = true,
          store: EmployeesDataStore) {
         self.id = id
+        self.isEditable = isEditable
         self.store = store
     }
     
@@ -90,6 +93,7 @@ struct EmployeeDetails: View {
                         self.isEditMode = false
                     }
                 }
+                Spacer()
             }.padding()
         }
         else {
@@ -98,18 +102,24 @@ struct EmployeeDetails: View {
                  .loading:
                 ProgressView()
             case let .loaded(employee):
+                HStack {
                 VStack(alignment: .leading) {
                     Text("Code: \(employee.code)")
                     Text("Name: \(employee.firstName) \(employee.lastName)")
                     Text("Email: \(employee.email)")
                     Text("Role: \(employee.role)")
-                    Button("Delete") {
-                        self.store.deleteEmployee(id: id)
-                        isRemoved = true
+                    if isEditable {
+                        Button("Delete") {
+                            self.store.deleteEmployee(id: id)
+                            isRemoved = true
+                        }
+                        Button("Edit") {
+                            isEditMode = true
+                        }
                     }
-                    Button("Edit") {
-                        isEditMode = true
-                    }
+                    Spacer()
+                }
+                    Spacer()
                 }.padding()
             default:
                 Text("Loading failed")

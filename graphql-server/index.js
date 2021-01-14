@@ -33,21 +33,21 @@ const typeDefs = gql`
     description: String!
     start_date: String!
     end_date: String!
-    next_task: Task
+    status: String!
     activities: [Activity]!
-    assigned: Employee
+    assigned: Employee!
   }
 
   type Activity {
     id: Int!
     activity_name: String!
     task_id: Int!
-    priority: String!
+    priority: Int!
     description: String!
     start_date: String!
     end_date: String!
-    next_activity: Activity
-    assigned: Employee
+    status: String!
+    assigned: Employee!
   }
 
    type Client {
@@ -84,9 +84,10 @@ const typeDefs = gql`
     employee(id: Int): Employee
     
     projects: [Project]
-    project(id: Int): [Project]
+    project(id: Int): Project
 
     task(id: Int): Task
+    activity(id: Int): Activity
 
     clients: [Client]
     client(id: Int!): Client
@@ -126,18 +127,17 @@ const typeDefs = gql`
     description: String!
     start_date: String!
     end_date: String!
-    next_task: Int!
+    status: String!
     employee_id: Int!
   }
 
   input TaskUpdateInput{
     task_name: String
-    project_id: Int
     priority: Int
     description: String
     start_date: String
     end_date: String
-    next_task: Int
+    status: String!
     employee_id: Int
   }
 
@@ -148,18 +148,17 @@ const typeDefs = gql`
     description: String!
     start_date: String!
     end_date: String!
-    next_activity: Int!
+    status: String!
     employee_id: Int!
   }
 
   input ActivityUpdateInput{
     activity_name: String
-    task_id: Int
     priority: Int
     description: String
     start_date: String
     end_date: String
-    next_activity: Int
+    status: String
     employee_id: Int
   }
 
@@ -209,17 +208,17 @@ const typeDefs = gql`
 
   type Mutation {
 
-    createProject(input: ProjectInput): [Project]
-    deleteProject(id: Int!): [Project]
-    updateProject(id: Int!, input: ProjectUpdateInput): Project
+    createProject(input: ProjectInput): Project
+    deleteProject(id: Int!): String
+    updateProject(id: Int!, input: ProjectUpdateInput): String
 
-    createTask(input: TaskInput): [Task]
-    deleteTask(id: Int!): [Task]
-    updateTask(id: Int!, input: TaskUpdateInput): Task
+    createTask(input: TaskInput): Task
+    deleteTask(id: Int!): String
+    updateTask(id: Int!, input: TaskUpdateInput): String
 
-    createActivity(input: ActivityInput): [Activity]
-    deleteActivity(id: Int!): [Activity]
-    updateActivity(id: Int!, input: ActivityUpdateInput): Activity
+    createActivity(input: ActivityInput): Activity
+    deleteActivity(id: Int!): String
+    updateActivity(id: Int!, input: ActivityUpdateInput): String
 
     createClient(input: ClientInput): Client
     deleteClient(id: Int!): String
@@ -349,10 +348,13 @@ const resolvers = {
            return await query(`SELECT * FROM projects.project`)
         },
         project: async (parent, args, context, info) => {
-          return await query(`SELECT * FROM projects.project WHERE id = ${args.id}`)
+          return (await query(`SELECT * FROM projects.project WHERE id = ${args.id}`))[0]
         },
         task: async (parent, args, context, info) => {
           return (await query(`SELECT * FROM tasks.task WHERE id = ${args.id}`))[0]
+        },
+        activity: async (parent, args, context, info) => {
+          return (await query(`SELECT * FROM tasks.activity WHERE id = ${args.id}`))[0]
         },
         clients: async (parent, args, context, info) => {
           return await query(`SELECT * FROM projects.client`)
@@ -369,47 +371,47 @@ const resolvers = {
 
       createProject: async (parent, {input}, context, info) => {
         await query(`INSERT INTO projects.project (project_name, start_date, end_date, project_descr,employee_id, budget, client_id) VALUES ('${input.project_name}', '${input.start_date}', '${input.end_date}', '${input.project_descr}','${input.employee_id}','${input.budget}','${input.client_id}')`)
-        return await query(`SELECT * FROM projects.project`)
+        var result = await query(`SELECT * FROM projects.project ORDER BY id DESC LIMIT 1`)
+        return result[0]
       },
 
       deleteProject: async (parent, {id}, context, info) => {
         await query(`DELETE FROM projects.project WHERE id=${id}`)
-        return await query(`SELECT * FROM projects.project`)
+        return "Success"
       },
 
       updateProject: async (parent, {id, input}, context, info) => {
         await query(`UPDATE projects.project SET ${ToSqlUpdateValues(input)} WHERE id=${id}`)
-        return (await query(`SELECT * FROM projects.project Where id=${id}`))[0]
+        return "Success"
       },
 
       createTask: async (parent, {input}, context, info) => {
-        await query(`INSERT INTO tasks.task (task_name, priority, description, start_date, end_date, next_task,employee_id, project_id) VALUES ('${input.task_name}', '${input.priority}','${input.description}','${input.start_date}', '${input.end_date}', '${input.next_task}','${input.employee_id}','${input.project_id}')`)
-        return await query(`SELECT * FROM tasks.task`)
+        await query(`INSERT INTO tasks.task (task_name, priority, description, start_date, end_date,employee_id, project_id, status) VALUES ('${input.task_name}', '${input.priority}','${input.description}','${input.start_date}', '${input.end_date}','${input.employee_id}','${input.project_id}', '${input.status}')`)
+        return (await query(`SELECT * FROM tasks.task ORDER BY id DESC LIMIT 1`))[0]
       },
       deleteTask: async (parent, {id}, context, info) => {
         await query(`DELETE FROM tasks.task WHERE id=${id}`)
-        return await query(`SELECT * FROM tasks.task`)
+        return "Success"
       },
 
       updateTask: async (parent, {id, input}, context, info) => {
         await query(`UPDATE tasks.task SET ${ToSqlUpdateValues(input)} WHERE id=${id}`)
-        return (await query(`SELECT * FROM tasks.task Where id=${id}`))[0]
+        return "Success"
       },
 
       createActivity: async (parent, {input}, context, info) => {
-        console.log(input)
-        await query(`INSERT INTO tasks.activity (activity_name, task_id, priority, description, start_date, end_date, next_activity,employee_id) 
-                                         VALUES ('${input.activity_name}','${input.task_id}', '${input.priority}','${input.description}','${input.start_date}', '${input.end_date}', '${input.next_activity}','${input.employee_id}')`)
-        return await query(`SELECT * FROM tasks.activity`)
+        await query(`INSERT INTO tasks.activity (activity_name, task_id, priority, description, start_date, end_date, status ,employee_id) 
+                                         VALUES ('${input.activity_name}','${input.task_id}', '${input.priority}','${input.description}','${input.start_date}', '${input.end_date}', '${input.status}','${input.employee_id}')`)
+        return (await query(`SELECT * FROM tasks.activity ORDER BY id DESC LIMIT 1`))[0]
       },
       deleteActivity: async (parent, {id}, context, info) => {
         await query(`DELETE FROM tasks.activity WHERE id=${id}`)
-        return await query(`SELECT * FROM tasks.activity`)
+        return "Success"
       },
 
       updateActivity: async (parent, {id, input}, context, info) => {
         await query(`UPDATE tasks.activity SET ${ToSqlUpdateValues(input)} WHERE id=${id}`)
-        return (await query(`SELECT * FROM tasks.activity Where id=${id}`))[0]
+        return "Success"
       },
 
       createClient: async (parent, {input}, context, info) => {
@@ -486,7 +488,7 @@ const resolvers = {
     },
     manager: async parent => {
       var result = await request(employee_request)
-      return result.filter(employee => employee.id == args.employee_id)[0]
+      return result.filter(employee => employee.id == parent.employee_id)[0]
     },
     tasks: async parent => {
       return await query(`SELECT * FROM tasks.task WHERE project_id = ${parent.id}`) 
@@ -494,9 +496,6 @@ const resolvers = {
   },   
   
   Task: {
-    next_task: async parent => {
-      return (await query(`SELECT * FROM tasks.task WHERE id = ${parent.next_task}`))[0] 
-    },
     activities: async parent => {
       return (await query(`SELECT * FROM tasks.activity WHERE task_id = ${parent.id}`)) 
     },
@@ -510,10 +509,7 @@ const resolvers = {
     assigned: async parent => {
       var result = await request(employee_request)
           return result.filter(employee => employee.id == parent.employee_id)[0] 
-    },
-    next_activity: async parent => {
-      return (await query(`SELECT * FROM tasks.activity WHERE id = ${parent.next_activity}`))[0] 
-      }
+    }
   },
 } 
 
@@ -523,6 +519,6 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers, });
 
 // The listen method launches a web server.
-server.listen({port: 2003}).then(({ url }) => {
+server.listen({port: 2004}).then(({ url }) => {
    console.log(`🚀  Server ready at ${url}`);
 });

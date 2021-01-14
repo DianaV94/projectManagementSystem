@@ -35,9 +35,15 @@ struct Sidebar: View {
             ForEach(Table.allCases,
                     id: \.self) { table in
                 switch table {
-                case .projects, .roles:
+                case .roles:
                     NavigationLink(
                         destination: Text("Work in progress")
+                    ) {
+                        Text(table.menuName).font(.headline)
+                    }
+                case .projects:
+                    NavigationLink(
+                        destination: ProjectList()
                     ) {
                         Text(table.menuName).font(.headline)
                     }

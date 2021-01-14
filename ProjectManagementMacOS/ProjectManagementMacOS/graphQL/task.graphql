@@ -1,0 +1,25 @@
+query Task($id:Int!) {
+  task(id: $id) {
+    id
+    task_name
+    description
+    start_date
+    end_date
+    priority
+    status
+    assigned {
+      id
+      employee_name
+      role {
+        id
+        role_name
+      }
+    }
+    activities {
+      id
+      activity_name
+      status
+    }
+  }
+}
+

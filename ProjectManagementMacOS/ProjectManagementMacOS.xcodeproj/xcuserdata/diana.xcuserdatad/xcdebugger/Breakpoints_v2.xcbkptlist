@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ProjectManagementMacOS/Roles/RolesDataStore.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1 - f976ed70d2f288f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;ProjectManagementMacOS.RolesQuery.Data&gt;, Swift.Error&gt;) -&gt; () in ProjectManagementMacOS.RolesDataStore.() -&gt; ProjectManagementMacOS.RolesDataStore(in _727A12C688C6A9BCAAAA7094CD473A8F).init() -&gt; ProjectManagementMacOS.RolesDataStore"
-                  moduleName = "ProjectManagementMacOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Roles/RolesDataStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "77">
-               </Location>
-               <Location
-                  uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1 - f976ed70d2f288f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;ProjectManagementMacOS.RolesQuery.Data&gt;, Swift.Error&gt;) -&gt; () in ProjectManagementMacOS.RolesDataStore.() -&gt; ProjectManagementMacOS.RolesDataStore(in _727A12C688C6A9BCAAAA7094CD473A8F).init() -&gt; ProjectManagementMacOS.RolesDataStore"
-                  moduleName = "ProjectManagementMacOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Roles/RolesDataStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "123">
-               </Location>
-               <Location
-                  uuid = "137A1AC2-6773-4D64-B7EA-9E81872B69A1 - f976ed70d2f288f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;ProjectManagementMacOS.RolesQuery.Data&gt;, Swift.Error&gt;) -&gt; () in ProjectManagementMacOS.RolesDataStore.() -&gt; ProjectManagementMacOS.RolesDataStore(in _727A12C688C6A9BCAAAA7094CD473A8F).init() -&gt; ProjectManagementMacOS.RolesDataStore"
-                  moduleName = "ProjectManagementMacOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diana/Documents/master/ProjectManagementMacOS/ProjectManagementMacOS/Roles/RolesDataStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "1471">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "92838B27-0290-4EE0-96F4-7303A7B407F6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -129,6 +66,54 @@
                   offsetFromSymbolStart = "212">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDD40A4F-479B-4F20-9AD2-0768C0637822"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectManagementMacOS/Projects/ProjectsDataStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
+            landmarkName = "updateSubTask(_:data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F10500C6-8A2A-4F19-8810-AA7A256D59B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectManagementMacOS/Projects/ProjectsDataStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "changeCurrentTask(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C915CA12-6309-4AAC-97F3-451A4C6E77D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectManagementMacOS/Projects/ProjectsDataStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "changeCurrentProject(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

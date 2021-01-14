@@ -1,0 +1,4 @@
+mutation UpdateActivity($id: Int!, $input: ActivityUpdateInput!) {
+  updateActivity(id: $id, input: $input)
+}
+

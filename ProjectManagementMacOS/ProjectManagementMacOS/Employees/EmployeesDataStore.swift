@@ -12,6 +12,7 @@ import SwiftUI
 struct EmployeeMetaInfo {
     let id: Int
     let name: String
+    let role: Role
 }
 
 struct Employee {
@@ -66,7 +67,9 @@ final class EmployeesDataStore: ObservableObject {
     @Published var employees: DataState<[EmployeeMetaInfo]> = .initial
     @Published var currentEmployee: DataState<Employee> = .initial
     
-    init() {
+    static let instance = EmployeesDataStore()
+
+    private init() {
         employees = .loading
         Network.shared.apollo.fetch(query: EmployeesQuery(), cachePolicy: .fetchIgnoringCacheCompletely) { result in
             switch result {
@@ -191,7 +194,10 @@ final class EmployeesDataStore: ObservableObject {
                                                      roleId: data.role!.id)
                 Network.shared.apollo.perform(mutation: CreateEmployeeMutation(input: addEmployeeInput)) { result in
                     if let employee = (try? result.get().data)?.createEmployee {
-                        let employeeMetaInfo = EmployeeMetaInfo(id: employee.id, name: employee.employeeName)
+                        let employeeMetaInfo = EmployeeMetaInfo(id: employee.id,
+                                                                name: employee.employeeName,
+                                                                role: Role(id: employee.role.id,
+                                                                           name: employee.role.roleName))
                         let currentEmployees = self.employees.data ?? []
                         self.employees = .loaded([employeeMetaInfo] + currentEmployees)
                     }
@@ -202,6 +208,8 @@ final class EmployeesDataStore: ObservableObject {
     }
     
     func mapGQLEmployeeToEmployeeMeta(_ gqlEmployee: EmployeesQuery.Data.Employee) -> EmployeeMetaInfo {
-        .init(id: gqlEmployee.id, name: gqlEmployee.employeeName)
+        .init(id: gqlEmployee.id,
+              name: gqlEmployee.employeeName,
+              role: Role(id: gqlEmployee.role.id, name: gqlEmployee.role.roleName))
     }
 }
