@@ -2,16 +2,16 @@
   "employees": [
     {
       "employee_code": "105",
-      "employee_name": "ancaanca",
+      "employee_name": "Anca",
       "account_id": 2,
       "role_id": 5,
       "id": 2
     },
     {
       "employee_code": "110",
-      "employee_name": "Bobi",
+      "employee_name": "Dia",
       "account_id": 3,
-      "role_id": 5,
+      "role_id": 4,
       "id": 3
     }
   ],
@@ -35,6 +35,10 @@
     {
       "role_name": "developer",
       "id": 6
+    },
+    {
+      "role_name": "product_owner1",
+      "id": 7
     }
   ],
   "user_account": [
@@ -46,14 +50,14 @@
     },
     {
       "email": "diana_anca@gmail.com",
-      "firstname": "Diana",
+      "firstname": "Anca",
       "lastname": "Vasiliev",
       "id": 2
     },
     {
-      "email": "bobi@gmail.com",
-      "firstname": "Bogdan",
-      "lastname": "Vasilieve",
+      "email": "dia@gmail.com",
+      "firstname": "Diana",
+      "lastname": "V",
       "id": 3
     }
   ]

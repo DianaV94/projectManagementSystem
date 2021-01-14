@@ -1,0 +1,250 @@
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
+"""
+Direct the client to resolve this field locally, either from the cache or local resolvers.
+"""
+directive @client(
+  """
+  When true, the client will never use the cache for this value. See
+  https://www.apollographql.com/docs/react/essentials/local-state/#forcing-resolvers-with-clientalways-true
+  """
+  always: Boolean
+) on FIELD | FRAGMENT_DEFINITION | INLINE_FRAGMENT
+
+"""
+Export this locally resolved field as a variable to be used in the remainder of this query. See
+https://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables
+"""
+directive @export(
+  """The variable name to export this field as."""
+  as: String!
+) on FIELD
+
+"""
+Specify a custom store key for this result. See
+https://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive
+"""
+directive @connection(
+  """Specify the store key."""
+  key: String!
+
+  """
+  An array of query argument names to include in the generated custom store key.
+  """
+  filter: [String!]
+) on FIELD
+
+type Project {
+  id: Int!
+  project_name: String!
+  start_date: String!
+  end_date: String!
+  project_descr: String!
+  budget: Int!
+  manager: Employee!
+  client: Client!
+  tasks: [Task]!
+}
+
+type Task {
+  id: Int!
+  task_name: String!
+  project_id: Int!
+  priority: Int!
+  description: String!
+  start_date: String!
+  end_date: String!
+  status: String!
+  activities: [Activity]!
+  assigned: Employee!
+}
+
+type Activity {
+  id: Int!
+  activity_name: String!
+  task_id: Int!
+  priority: Int!
+  description: String!
+  start_date: String!
+  end_date: String!
+  status: String!
+  assigned: Employee!
+}
+
+type Client {
+  id: Int!
+  name: String!
+  address: String!
+  details: String!
+  email: String!
+}
+
+type Employee {
+  id: Int!
+  employee_code: String!
+  employee_name: String!
+  account: UserAccount!
+  role: Role!
+}
+
+type UserAccount {
+  id: Int!
+  email: String!
+  firstname: String!
+  lastname: String!
+}
+
+type Role {
+  id: Int!
+  role_name: String!
+}
+
+type Query {
+  employees: [Employee]
+  employee(id: Int): Employee
+  projects: [Project]
+  project(id: Int): Project
+  task(id: Int): Task
+  activity(id: Int): Activity
+  clients: [Client]
+  client(id: Int!): Client
+  roles: [Role]
+}
+
+input ProjectInput {
+  project_name: String!
+  start_date: String!
+  end_date: String!
+  project_descr: String!
+  budget: Int!
+  employee_id: Int!
+  client_id: Int!
+}
+
+input ProjectUpdateInput {
+  project_name: String
+  start_date: String
+  end_date: String
+  project_descr: String
+  budget: Int
+  employee_id: Int
+  client_id: Int
+}
+
+input TaskInput {
+  task_name: String!
+  project_id: Int!
+  priority: Int!
+  description: String!
+  start_date: String!
+  end_date: String!
+  status: String!
+  employee_id: Int!
+}
+
+input TaskUpdateInput {
+  task_name: String
+  priority: Int
+  description: String
+  start_date: String
+  end_date: String
+  status: String!
+  employee_id: Int
+}
+
+input ActivityInput {
+  activity_name: String!
+  task_id: Int!
+  priority: Int!
+  description: String!
+  start_date: String!
+  end_date: String!
+  status: String!
+  employee_id: Int!
+}
+
+input ActivityUpdateInput {
+  activity_name: String
+  priority: Int
+  description: String
+  start_date: String
+  end_date: String
+  status: String
+  employee_id: Int
+}
+
+input ClientInput {
+  name: String!
+  address: String!
+  details: String!
+  email: String!
+}
+
+input ClientUpdateInput {
+  name: String
+  address: String
+  details: String
+  email: String
+}
+
+input EmployeeInput {
+  employee_code: String!
+  employee_name: String!
+  account_id: Int!
+  role_id: Int!
+}
+
+input EmployeeUpdateInput {
+  employee_code: String
+  employee_name: String
+  account_id: Int
+  role_id: Int
+}
+
+input UserAccountInput {
+  email: String!
+  firstname: String!
+  lastname: String!
+}
+
+input UserAccountUpdateInput {
+  email: String
+  firstname: String
+  lastname: String
+}
+
+input RoleInput {
+  role_name: String!
+}
+
+type Mutation {
+  createProject(input: ProjectInput): Project
+  deleteProject(id: Int!): String
+  updateProject(id: Int!, input: ProjectUpdateInput): String
+  createTask(input: TaskInput): Task
+  deleteTask(id: Int!): String
+  updateTask(id: Int!, input: TaskUpdateInput): String
+  createActivity(input: ActivityInput): Activity
+  deleteActivity(id: Int!): String
+  updateActivity(id: Int!, input: ActivityUpdateInput): String
+  createClient(input: ClientInput): Client
+  deleteClient(id: Int!): String
+  updateClient(id: Int!, input: ClientUpdateInput!): String
+  createEmployee(input: EmployeeInput): Employee
+  deleteEmployee(id: Int!): String
+  updateEmployee(id: Int, input: EmployeeUpdateInput): String
+  createUserAccount(input: UserAccountInput): UserAccount
+  deleteUserAccount(id: Int!): String
+  updateUserAccount(id: Int, input: UserAccountUpdateInput): String
+  createRole(input: RoleInput): Role
+  deleteRole(id: Int!): String
+  updateRole(id: Int, input: RoleInput): String
+}
+
+enum CacheControlScope {
+  PUBLIC
+  PRIVATE
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload

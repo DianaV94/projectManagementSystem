@@ -234,7 +234,7 @@ const typeDefs = gql`
 
     createRole(input: RoleInput): Role
     deleteRole(id:Int!): String
-    updateRole(id: Int, input: RoleInput): Role
+    updateRole(id: Int, input: RoleInput): String
   }
 `;
 
@@ -468,7 +468,8 @@ const resolvers = {
       },
 
       updateRole: async (parent, {id, input}, context, info) => {
-        return await request(roles_update_request(id, input))
+        await request(roles_update_request(id, input))
+        return "Success"
       }
     },
     
